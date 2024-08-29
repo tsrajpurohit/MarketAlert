@@ -126,7 +126,7 @@ def main():
     ]
 
     # Hardcoded Telegram bot token and chat ID
-    bot_token = '5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8'
+    bot_token = '7286275616:AAFJEubN4vSn8Trk9vo9cSDYOdaHCbXD_Jo'
     chat_id = '-1001905543659'
 
     if not bot_token or not chat_id:
