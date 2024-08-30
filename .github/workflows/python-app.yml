@@ -1,0 +1,29 @@
+name: Python application
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Runs every 5 minutes
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.10'  # Use the version you need
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install PyGithub requests beautifulsoup4 pyyaml
+
+    - name: Run script
+      run: python MarketAlert.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
