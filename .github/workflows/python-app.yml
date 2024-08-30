@@ -6,6 +6,7 @@ on:
 jobs:
   check-and-run:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository content
         uses: actions/checkout@v4
@@ -31,21 +32,19 @@ jobs:
       - name: Check if MarketAlert.py is running
         id: check-status
         run: |
-          # Check if the status file exists and if it's marked as running
           if [ -f ".script_status" ] && grep -q "running" .script_status; then
             echo "MarketAlert.py is currently running. No action needed."
             echo "status=running" >> $GITHUB_ENV
           else
             echo "MarketAlert.py is not running. Starting it now."
-            echo "stopped" > .script_status # Update status to stopped before running
             echo "status=stopped" >> $GITHUB_ENV
 
       - name: Run MarketAlert.py if stopped
         if: env.status == 'stopped'
         run: |
           echo "Starting MarketAlert.py..."
-          echo "running" > .script_status # Update status to running
-          python MarketAlert.py || echo "stopped" > .script_status # Update status if it stops
+          echo "running" > .script_status
+          python MarketAlert.py || echo "stopped" > .script_status
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
 
