@@ -103,7 +103,7 @@ def main():
 
     # Hardcoded Telegram bot token and chat ID
     bot_token = '5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8'
-    chat_id = '-1001905543659'      # Replace with your actual chat ID
+    chat_id = '-1001905543659'     # Replace with your actual chat ID
 
     if not bot_token or not chat_id:
         logging.error("Telegram bot token or chat ID is missing.")
