@@ -1,4 +1,4 @@
-name: Monitor and Run MarketAlert_New_new.py
+name: Monitor and Run MarketAlert_New_New.py
 
 on:
   workflow_dispatch: # Allows manual trigger from GitHub Actions UI
@@ -42,7 +42,7 @@ jobs:
       - name: Run MarketAlert_New.py if stopped
         if: env.status == 'stopped'
         run: |
-          echo "Starting MarketAlert_New_New.py..."
+          echo "Starting MarketAlert_New.py..."
           echo "running" > .script_status
           python MarketAlert_New.py || echo "stopped" > .script_status
         env:
