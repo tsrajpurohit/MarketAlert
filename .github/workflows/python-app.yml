@@ -19,4 +19,4 @@ jobs:
           python-version: '3.10'
       
       - name: Run Python script
-        run: python MarketAlert_New.py
+        run: MarketAlert_New.py
