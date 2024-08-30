@@ -1,41 +1,65 @@
-name: run MakrketAlert.py
+name: Monitor and Run MarketAlert.py
 
 on:
-  schedule:
-    - cron: '15 * * * *' # At 00:00 on Monday
+  workflow_dispatch: # Allows manual trigger from GitHub Actions UI
 
 jobs:
-  build:
+  check-and-run:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v4
 
-      - name: checkout repo content
-        uses: actions/checkout@v2 # checkout the repository content to github runner
-
-      - name: setup python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10' # install the python version needed
-          
-      - name: install python packages
+          python-version: '3.10'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install Python packages
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          
-      - name: execute py script # run MarketAlert.py
+
+      - name: Check if MarketAlert.py is running
+        id: check-status
+        run: |
+          # Check if the status file exists and if it's marked as running
+          if [ -f ".script_status" ] && grep -q "running" .script_status; then
+            echo "MarketAlert.py is currently running. No action needed."
+            echo "status=running" >> $GITHUB_ENV
+          else
+            echo "MarketAlert.py is not running. Starting it now."
+            echo "stopped" > .script_status # Update status to stopped before running
+            echo "status=stopped" >> $GITHUB_ENV
+
+      - name: Run MarketAlert.py if stopped
+        if: env.status == 'stopped'
+        run: |
+          echo "Starting MarketAlert.py..."
+          echo "running" > .script_status # Update status to running
+          python MarketAlert.py || echo "stopped" > .script_status # Update status if it stops
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python MarketAlert.py
-          
-      - name: commit files
+
+      - name: Commit status changes if script stopped
+        if: env.status == 'stopped'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
-          
-      - name: push changes
+          git add .script_status
+          git commit -m "Updated script status to stopped" || echo "No changes to commit."
+
+      - name: Push changes
+        if: env.status == 'stopped'
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: MarketAlert 
+          branch: MarketAlert
