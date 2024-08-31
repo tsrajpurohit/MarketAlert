@@ -52,13 +52,14 @@ def scrape_news(url, selector):
 
 def create_json_feed(items, output_file):
     feed_data = {
-        'title': "RSS Feed Title",  # Adjust as needed
-        'link': "https://example.com",  # Adjust as needed
-        'description': "RSS Feed Description",  # Adjust as needed
+        'title': "RSS Feed Title",
+        'link': "https://example.com",
+        'description': "RSS Feed Description",
         'lastBuildDate': datetime.datetime.now().isoformat(),
         'items': items
     }
 
+    logging.info(f"Creating JSON feed at {output_file}")
     with open(output_file, 'w', encoding='utf-8') as file:
         json.dump(feed_data, file, indent=4)
 
