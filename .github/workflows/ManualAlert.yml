@@ -1,32 +1,64 @@
-# This is a basic workflow that is manually triggered
+name: Monitor and Run MarketAlert_New.py
 
-name: Manual workflow
-
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
 on:
-  workflow_dispatch:
-    # Inputs the workflow accepts.
-    inputs:
-      name:
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
-        # Default value if no value is explicitly provided
-        default: 'World'
-        # Input has to be provided for the workflow to run
-        required: true
-        # The data type of the input
-        type: string
+  workflow_dispatch: # Allows manual trigger from GitHub Actions UI
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "greet"
-  greet:
-    # The type of runner that the job will run on
+  check-and-run:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: MarketAlert_New.py
+      - name: Checkout repository content
+        uses: actions/checkout@v4 # No update needed for this action
+
+      - name: Set up Python
+        uses: actions/setup-python@v5 # Updated to the latest version compatible with Node 20
+        with:
+          python-version: '3.10'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4 # Updated to the latest version compatible with Node 20
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install Python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Check if MarketAlert_New.py is running
+        id: check-status
+        run: |
+          if [ -f ".script_status" ] && grep -q "running" .script_status; then
+            echo "MarketAlert_New.py is currently running. No action needed."
+            echo "status=running" >> $GITHUB_ENV
+          else
+            echo "MarketAlert_New.py is not running. Starting it now."
+            echo "stopped" > .script_status # Update status to stopped before running
+            echo "status=stopped" >> $GITHUB_ENV
+
+      - name: Run MarketAlert_New.py if stopped
+        if: env.status == 'stopped'
+        run: |
+          echo "Starting MarketAlert_New.py..."
+          echo "running" > .script_status # Update status to running
+          python MarketAlert_New.py || echo "stopped" > .script_status # Update status if it stops
+        env:
+          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+
+      - name: Commit status changes if script stopped
+        if: env.status == 'stopped'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .script_status
+          git commit -m "Updated script status to stopped" || echo "No changes to commit."
+
+      - name: Push changes
+        if: env.status == 'stopped'
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: MarketAlert
