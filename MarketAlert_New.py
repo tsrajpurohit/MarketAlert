@@ -98,6 +98,30 @@ def main():
             'selector': 'div.eachStory',
             'output_file': "economictimes_stocks_rss_feed.json",
             'sent_ids_file': 'economictimes_stocks_sent_ids.json'
+        },
+        {
+            'url': "https://www.business-standard.com/markets/news",
+            'selector': 'div.listingstyle_cardlistlist__dfq57.cardlist',
+            'output_file': "businessstandard_markets_news_rss_feed.json",
+            'sent_ids_file': 'businessstandard_markets_news_sent_ids.json'
+        },
+        {
+            'url': "https://www.business-standard.com/markets/capital-market-news",
+            'selector': 'div.listingstyle_cardlistlist__dfq57.cardlist',
+            'output_file': "businessstandard_capital_market_news_rss_feed.json",
+            'sent_ids_file': 'businessstandard_capital_market_news_sent_ids.json'
+        },
+        {
+            'url': "https://www.business-standard.com/topic/ipos",
+            'selector': 'div.listingstyle_cardlistlist__dfq57.cardlist',
+            'output_file': "businessstandard_ipos_rss_feed.json",
+            'sent_ids_file': 'businessstandard_ipos_sent_ids.json'
+        },
+        {
+            'url': "https://www.business-standard.com/markets/mutual-fund",
+            'selector': 'div.listingstyle_cardlistlist__dfq57.cardlist',
+            'output_file': "businessstandard_mutual_fund_rss_feed.json",
+            'sent_ids_file': 'businessstandard_mutual_fund_sent_ids.json'
         }
     ]
 
