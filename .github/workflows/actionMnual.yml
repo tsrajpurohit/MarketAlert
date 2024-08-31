@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repo content
-        uses: actions/checkout@v3  # Updated to v3
+        uses: actions/checkout@v3
 
       - name: Setup Python
-        uses: actions/setup-python@v5  # Updated to v5
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -45,7 +45,11 @@ jobs:
           git diff-index --quiet HEAD || git commit -m "Update JSON feed files"
 
       - name: Push changes
-        uses: ad-m/github-push-action@v0.6.1  # Updated to v0.6.1
+        uses: EndBug/add-and-commit@v9.0.0  # Use this action to push changes
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          add: 'data/*.json'  # Adjust this to include the files you want to commit
+          message: 'Update JSON feed files'
           branch: main
+          author_name: 'GitHub Actions'
+          author_email: 'action@github.com'
+          push: true
