@@ -6,7 +6,7 @@ import os
 import json
 import logging
 from dotenv import load_dotenv
-
+import subprocess
 # Load environment variables from .env file
 load_dotenv()
 
@@ -89,7 +89,14 @@ def read_sent_ids(file_path):
 def write_sent_ids(file_path, ids):
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(list(ids), file)
-
+def commit_and_push_changes(repo_path, commit_message):
+    try:
+        subprocess.run(['git', 'add', '.'], cwd=repo_path, check=True)
+        subprocess.run(['git', 'commit', '-m', commit_message], cwd=repo_path, check=True)
+        subprocess.run(['git', 'push'], cwd=repo_path, check=True)
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Git operation failed: {e}")
+        
 def main():
     sources = [
         {
