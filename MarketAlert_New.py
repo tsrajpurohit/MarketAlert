@@ -144,8 +144,8 @@ def main():
     ]
 
     # Get Telegram bot token and chat ID from environment variables
-    bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
-    chat_id = os.environ.get('TELEGRAM_CHAT_ID')
+    bot_token = os.environ('TELEGRAM_BOT_TOKEN')
+    chat_id = os.environ('TELEGRAM_CHAT_ID')
 
     if not bot_token or not chat_id:
         logging.error("Telegram bot token or chat ID is missing.")
