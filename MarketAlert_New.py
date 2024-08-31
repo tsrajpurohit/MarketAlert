@@ -100,7 +100,6 @@ def commit_and_push_changes(repo_path, commit_message):
         logging.error(f"Git operation failed: {e}")
 
 def main():
-    repo_path = 'path/to/your/news-json-feed'  # Update with the path to your cloned repo
     sources = [
         {
             'url': "https://www.moneycontrol.com/news/business/stocks/",
@@ -147,8 +146,8 @@ def main():
     ]
 
     # Get Telegram bot token and chat ID from environment variables
-    bot_token = os.environ("TELEGRAM_BOT_TOKEN")
-    chat_id = os.environ("TELEGRAM_CHAT_ID")
+    bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
+    chat_id = os.environ.get('TELEGRAM_CHAT_ID')
 
     if not bot_token or not chat_id:
         logging.error("Telegram bot token or chat ID is missing.")
@@ -168,7 +167,7 @@ def main():
                         new_items_to_send = [item for item in new_items if item['link'] not in sent_ids]
                         
                         if new_items_to_send:
-                            create_json_feed(new_items_to_send, os.path.join(repo_path, source['output_file']))
+                            create_json_feed(new_items_to_send, source['output_file'])
                             logging.info(f"JSON feed created successfully: {source['output_file']}")
 
                             new_ids = set(item['link'] for item in new_items_to_send)
@@ -178,9 +177,6 @@ def main():
 
                             # Update the list of sent item IDs
                             write_sent_ids(source['sent_ids_file'], sent_ids.union(new_ids))
-                            
-                            # Commit and push changes to the GitHub repo
-                            commit_and_push_changes(repo_path, 'Update JSON feeds')
                     
             # Wait for 120 seconds before the next iteration
             time.sleep(120)
@@ -190,7 +186,9 @@ def main():
             break
         except Exception as e:
             logging.error(f"An error occurred: {e}")
+            # Optional: Wait a bit before retrying in case of error
             time.sleep(60)
 
 if __name__ == "__main__":
     main()
+
