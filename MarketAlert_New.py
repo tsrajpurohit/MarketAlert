@@ -128,8 +128,8 @@ def main():
     ]
 
     # Hardcoded Telegram bot token and chat ID
-    bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
-    chat_id = os.getenv('TELEGRAM_CHAT_ID')     # Replace with your actual chat ID
+    bot_token = os.environ('TELEGRAM_BOT_TOKEN')
+    chat_id = os.environ‎('TELEGRAM_CHAT_ID')     # Replace with your actual chat ID
 
     if not bot_token or not chat_id:
         logging.error("Telegram bot token or chat ID is missing.")
