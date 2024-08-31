@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repo content
         uses: actions/checkout@v2
@@ -14,12 +14,12 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-          
+
       - name: Install Python packages
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          
+
       - name: Execute Python script
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
@@ -29,9 +29,10 @@ jobs:
 
       - name: List files
         run: |
+          echo "Listing all files:"
           ls -al
-          cat economictimes_earnings_rss_feed.json
-          cat businessstandard_markets_news_rss_feed.json
+          echo "Checking JSON files:"
+          cat data/*.json || echo "No JSON files found"
 
       - name: Commit files
         run: |
@@ -39,7 +40,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add -A
           git diff-index --quiet HEAD || git commit -m "Update JSON feed files"
-          
+
       - name: Push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
