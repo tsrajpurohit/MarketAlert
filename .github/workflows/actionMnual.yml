@@ -33,7 +33,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "Updated logs" --allow-empty)
+          git commit -m "Update JSON feed files" || echo "No changes to commit"
           
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
