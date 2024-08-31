@@ -8,15 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository content
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4 # No update needed for this action
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # Updated to the latest version compatible with Node 20
         with:
           python-version: '3.10'
 
       - name: Cache pip dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4 # Updated to the latest version compatible with Node 20
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
@@ -31,7 +31,6 @@ jobs:
       - name: Check if MarketAlert.py is running
         id: check-status
         run: |
-          # Check if the status file exists and if it's marked as running
           if [ -f ".script_status" ] && grep -q "running" .script_status; then
             echo "MarketAlert.py is currently running. No action needed."
             echo "status=running" >> $GITHUB_ENV
@@ -59,7 +58,7 @@ jobs:
 
       - name: Push changes
         if: env.status == 'stopped'
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@v0.6.0 # This action may need to be updated if compatibility issues arise
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: MarketAlert
