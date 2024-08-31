@@ -6,8 +6,10 @@ import os
 import json
 import logging
 from dotenv import load_dotenv
+
 # Load environment variables from .env file
 load_dotenv()
+
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -80,12 +82,12 @@ def send_to_telegram(bot_token, chat_id, message):
 
 def read_sent_ids(file_path):
     if os.path.exists(file_path):
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             return set(json.load(file))
     return set()
 
 def write_sent_ids(file_path, ids):
-    with open(file_path, 'w') as file:
+    with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(list(ids), file)
 
 def main():
@@ -134,39 +136,50 @@ def main():
         }
     ]
 
-    # Hardcoded Telegram bot token and chat ID
-    bot_token = os.environ('TELEGRAM_BOT_TOKEN')
-    chat_id = os.environ‎('TELEGRAM_CHAT_ID')     # Replace with your actual chat ID
+    # Get Telegram bot token and chat ID from environment variables
+    bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
+    chat_id = os.environ.get('TELEGRAM_CHAT_ID')
 
     if not bot_token or not chat_id:
         logging.error("Telegram bot token or chat ID is missing.")
         return
 
     while True:
-        for source in sources:
-            sent_ids = read_sent_ids(source['sent_ids_file'])
-            items = scrape_news(source['url'], source['selector'])
-            
-            if items:
-                today = datetime.datetime.now().date()
-                new_items = [item for item in items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
+        try:
+            for source in sources:
+                sent_ids = read_sent_ids(source['sent_ids_file'])
+                items = scrape_news(source['url'], source['selector'])
                 
-                if new_items:
-                    new_items_to_send = [item for item in new_items if item['link'] not in sent_ids]
+                if items:
+                    today = datetime.datetime.now().date()
+                    new_items = [item for item in items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
                     
-                    if new_items_to_send:
-                        create_json_feed(new_items_to_send, source['output_file'])
-                        logging.info(f"JSON feed created successfully: {source['output_file']}")
+                    if new_items:
+                        new_items_to_send = [item for item in new_items if item['link'] not in sent_ids]
+                        
+                        if new_items_to_send:
+                            create_json_feed(new_items_to_send, source['output_file'])
+                            logging.info(f"JSON feed created successfully: {source['output_file']}")
 
-                        new_ids = set(item['link'] for item in new_items_to_send)
-                        for item in new_items_to_send:
-                            message = f"*{item['title']}*\n\n{item['description']}"
-                            send_to_telegram(bot_token, chat_id, message)
+                            new_ids = set(item['link'] for item in new_items_to_send)
+                            for item in new_items_to_send:
+                                message = f"*{item['title']}*\n\n{item['description']}"
+                                send_to_telegram(bot_token, chat_id, message)
 
-                        # Update the list of sent item IDs
-                        write_sent_ids(source['sent_ids_file'], sent_ids.union(new_ids))
+                            # Update the list of sent item IDs
+                            write_sent_ids(source['sent_ids_file'], sent_ids.union(new_ids))
                     
-        time.sleep(120)
+            # Wait for 120 seconds before the next iteration
+            time.sleep(120)
+
+        except KeyboardInterrupt:
+            logging.info("Script terminated by user.")
+            break
+        except Exception as e:
+            logging.error(f"An error occurred: {e}")
+            # Optional: Wait a bit before retrying in case of error
+            time.sleep(60)
 
 if __name__ == "__main__":
     main()
+
