@@ -6,6 +6,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Allows the action to push changes to the repository
+
     steps:
       - name: Checkout repo content
         uses: actions/checkout@v2
