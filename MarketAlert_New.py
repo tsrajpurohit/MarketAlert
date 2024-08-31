@@ -177,6 +177,11 @@ def main():
 
                             # Update the list of sent item IDs
                             write_sent_ids(source['sent_ids_file'], sent_ids.union(new_ids))
+                            
+                            # Commit and push changes to GitHub
+                            repo_path = '.'  # Assuming the script is running in the root of the repo
+                            commit_message = 'Updated JSON feed files'
+                            commit_and_push_changes(repo_path, commit_message)
                     
             # Wait for 120 seconds before the next iteration
             time.sleep(120)
@@ -189,6 +194,4 @@ def main():
             # Optional: Wait a bit before retrying in case of error
             time.sleep(60)
 
-if __name__ == "__main__":
-    main()
 
