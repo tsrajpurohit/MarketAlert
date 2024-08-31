@@ -7,6 +7,7 @@ import json
 import logging
 from dotenv import load_dotenv
 import subprocess
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -89,6 +90,7 @@ def read_sent_ids(file_path):
 def write_sent_ids(file_path, ids):
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(list(ids), file)
+
 def commit_and_push_changes(repo_path, commit_message):
     try:
         subprocess.run(['git', 'add', '.'], cwd=repo_path, check=True)
@@ -96,8 +98,9 @@ def commit_and_push_changes(repo_path, commit_message):
         subprocess.run(['git', 'push'], cwd=repo_path, check=True)
     except subprocess.CalledProcessError as e:
         logging.error(f"Git operation failed: {e}")
-        
+
 def main():
+    repo_path = 'path/to/your/news-json-feed'  # Update with the path to your cloned repo
     sources = [
         {
             'url': "https://www.moneycontrol.com/news/business/stocks/",
@@ -165,7 +168,7 @@ def main():
                         new_items_to_send = [item for item in new_items if item['link'] not in sent_ids]
                         
                         if new_items_to_send:
-                            create_json_feed(new_items_to_send, source['output_file'])
+                            create_json_feed(new_items_to_send, os.path.join(repo_path, source['output_file']))
                             logging.info(f"JSON feed created successfully: {source['output_file']}")
 
                             new_ids = set(item['link'] for item in new_items_to_send)
@@ -175,6 +178,9 @@ def main():
 
                             # Update the list of sent item IDs
                             write_sent_ids(source['sent_ids_file'], sent_ids.union(new_ids))
+                            
+                            # Commit and push changes to the GitHub repo
+                            commit_and_push_changes(repo_path, 'Update JSON feeds')
                     
             # Wait for 120 seconds before the next iteration
             time.sleep(120)
@@ -184,9 +190,7 @@ def main():
             break
         except Exception as e:
             logging.error(f"An error occurred: {e}")
-            # Optional: Wait a bit before retrying in case of error
             time.sleep(60)
 
 if __name__ == "__main__":
     main()
-
