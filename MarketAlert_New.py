@@ -50,7 +50,7 @@ def scrape_news(url, selector):
         logging.error(f"Error fetching data from {url}: {e}")
         return []
 
-def create_json_feed(items, data/output_file):
+def create_json_feed(items, 'data/output_file'):
     feed_data = {
         'title': "RSS Feed Title",  # Adjust as needed
         'link': "https://example.com",  # Adjust as needed
