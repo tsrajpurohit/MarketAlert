@@ -5,7 +5,9 @@ import time
 import os
 import json
 import logging
-
+from dotenv import load_dotenv
+# Load environment variables from .env file
+load_dotenv()
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -126,8 +128,8 @@ def main():
     ]
 
     # Hardcoded Telegram bot token and chat ID
-    bot_token = '5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8'
-    chat_id = '-1001905543659'     # Replace with your actual chat ID
+    bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
+    chat_id = os.getenv('TELEGRAM_CHAT_ID')     # Replace with your actual chat ID
 
     if not bot_token or not chat_id:
         logging.error("Telegram bot token or chat ID is missing.")
