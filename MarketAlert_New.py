@@ -6,7 +6,6 @@ import os
 import json
 import logging
 from dotenv import load_dotenv
-import subprocess
 
 # Load environment variables from .env file
 load_dotenv()
@@ -52,14 +51,13 @@ def scrape_news(url, selector):
 
 def create_json_feed(items, output_file):
     feed_data = {
-        'title': "RSS Feed Title",
-        'link': "https://example.com",
-        'description': "RSS Feed Description",
+        'title': "RSS Feed Title",  # Adjust as needed
+        'link': "https://example.com",  # Adjust as needed
+        'description': "RSS Feed Description",  # Adjust as needed
         'lastBuildDate': datetime.datetime.now().isoformat(),
         'items': items
     }
 
-    logging.info(f"Creating JSON feed at {output_file}")
     with open(output_file, 'w', encoding='utf-8') as file:
         json.dump(feed_data, file, indent=4)
 
@@ -91,14 +89,6 @@ def read_sent_ids(file_path):
 def write_sent_ids(file_path, ids):
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(list(ids), file)
-
-def commit_and_push_changes(repo_path, commit_message):
-    try:
-        subprocess.run(['git', 'add', '.'], cwd=repo_path, check=True)
-        subprocess.run(['git', 'commit', '-m', commit_message], cwd=repo_path, check=True)
-        subprocess.run(['git', 'push'], cwd=repo_path, check=True)
-    except subprocess.CalledProcessError as e:
-        logging.error(f"Git operation failed: {e}")
 
 def main():
     sources = [
@@ -178,11 +168,6 @@ def main():
 
                             # Update the list of sent item IDs
                             write_sent_ids(source['sent_ids_file'], sent_ids.union(new_ids))
-                            
-                            # Commit and push changes to GitHub
-                            repo_path = '.'  # Assuming the script is running in the root of the repo
-                            commit_message = 'Updated JSON feed files'
-                            commit_and_push_changes(repo_path, commit_message)
                     
             # Wait for 120 seconds before the next iteration
             time.sleep(120)
@@ -195,4 +180,6 @@ def main():
             # Optional: Wait a bit before retrying in case of error
             time.sleep(60)
 
+if __name__ == "__main__":
+    main()
 
