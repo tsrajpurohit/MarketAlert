@@ -38,15 +38,10 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git commit -m "Update JSON feed files" || echo "No changes to commit"
+          git diff-index --quiet HEAD || git commit -m "Update JSON feed files"
           
-      - name: Setup GitHub CLI
-        uses: cli/cli@v2
-        with:
-          gh-token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh repo set-default
-          gh repo sync
           git push origin main
