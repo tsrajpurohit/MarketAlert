@@ -8,6 +8,7 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -33,6 +34,13 @@ jobs:
         run: |
           echo "Listing files in the working directory"
           ls -la
+
+      - name: Ensure JSON files are present
+        run: |
+          echo "Listing all files in the directory"
+          ls -la
+          echo "Listing JSON files"
+          ls *.json
 
       - name: Commit and push JSON files
         run: |
