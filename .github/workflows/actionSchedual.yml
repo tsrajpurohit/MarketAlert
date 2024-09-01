@@ -56,10 +56,14 @@ jobs:
           fi
 
       - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0  # Verify if an updated version is available
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main 
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Updated logs" || echo "No changes to commit"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload JSON files as artifact
         uses: actions/upload-artifact@v4  # Updated to v4
