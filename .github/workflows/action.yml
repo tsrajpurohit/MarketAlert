@@ -23,6 +23,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: List files before running script
+        run: |
+          echo "Listing files before running the script"
+          ls -la
+
       - name: Run scraping script
         run: |
           python MarketAlert_New.py
@@ -30,25 +35,18 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
-      - name: List files for debugging
+      - name: List files after running script
         run: |
-          echo "Listing files in the working directory"
+          echo "Listing files after running the script"
           ls -la
 
-      - name: Ensure JSON files are present
+      - name: Check Git status
         run: |
-          echo "Listing all files in the directory"
-          ls -la
-          echo "Listing JSON files"
-          ls *.json
+          git status
 
       - name: Stage and commit JSON files
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          echo "Staging JSON files for commit"
           git add *.json
-          echo "Checking git status"
           git status
           if git diff --cached --quiet; then
             echo "No changes to commit"
