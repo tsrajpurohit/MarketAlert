@@ -24,19 +24,9 @@ logging.getLogger().addHandler(file_handler)
 script_directory = os.path.dirname(os.path.abspath(__file__))
 
 def parse_date(date_str):
-    """
-    Parse a date string into a datetime object.
-
-    Parameters:
-    date_str (str): The date string to parse.
-
-    Returns:
-    datetime.datetime: The parsed date.
-    """
+    """Parse a date string into a datetime object."""
     try:
-        # Remove 'Updated On :' prefix
         date_str = date_str.replace('Updated On :', '').strip()
-        # Parse date with fuzzy matching
         parsed_date = parser.parse(date_str, fuzzy=True)
         logging.info(f"Parsed date: {parsed_date}")
         return parsed_date
@@ -45,17 +35,8 @@ def parse_date(date_str):
         return datetime.datetime.now()
 
 def extract_date(article):
-    """
-    Extract date from an article, handling both <span> and <time> tags.
-
-    Parameters:
-    article (BeautifulSoup object): The article element to extract the date from.
-
-    Returns:
-    str: The extracted date as a string.
-    """
+    """Extract date from an article, handling both <span> and <time> tags."""
     date = None
-    # Extract date from <span> or <time> elements
     date_span = article.find('span')
     if date_span:
         date = date_span.get_text(strip=True)
@@ -65,17 +46,7 @@ def extract_date(article):
     return date
 
 def dynamic_extract(element, tag_names, attribute_name=None):
-    """
-    Dynamically extract content from an HTML element using a list of possible tags.
-
-    Parameters:
-    element (bs4.element.Tag): The parent element to search within.
-    tag_names (list): List of tag names to look for in the element.
-    attribute_name (str): The attribute to extract (if needed), defaults to None.
-
-    Returns:
-    str: Extracted content or an empty string if none found.
-    """
+    """Dynamically extract content from an HTML element using a list of possible tags."""
     for tag_name in tag_names:
         target = element.find(tag_name)
         if target:
@@ -84,18 +55,8 @@ def dynamic_extract(element, tag_names, attribute_name=None):
             return target.get_text(strip=True)
     return ''
 
-
 def scrape_news(url, selector):
-    """
-    Scrape news articles from a given URL and selector.
-
-    Parameters:
-    url (str): The URL to scrape.
-    selector (str): The CSS selector to locate articles.
-
-    Returns:
-    list: A list of dictionaries containing news article data.
-    """
+    """Scrape news articles from a given URL and selector."""
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
         'Accept-Language': 'en-US,en;q=0.9',
@@ -112,16 +73,13 @@ def scrape_news(url, selector):
         items = []
 
         for article in articles:
-            # Dynamically extract title, link, and description
             title = dynamic_extract(article, ['h2', 'h3', 'a', 'span'])
             link = dynamic_extract(article, ['a'], 'href')
             description = dynamic_extract(article, ['p', 'span', 'div'])
 
-            # If title is missing, use description as a fallback
             if not title:
                 title = description if description else 'No title'
 
-            # Validate and construct link if it is relative
             if link and not link.startswith('http'):
                 link = requests.compat.urljoin(url, link)
 
@@ -141,26 +99,38 @@ def scrape_news(url, selector):
         logging.error(f"Error fetching data from {url}: {e}")
         return []
 
-
-def create_json_feed(items, output_file):
-    """
-    Create a JSON feed from a list of items.
-
-    Parameters:
-    items (list): A list of dictionaries containing news article data.
-    output_file (str): The name of the output JSON file.
-    """
+def create_or_update_json_feed(items, output_file):
+    """Create or update a JSON feed with current date items."""
     output_path = os.path.join(script_directory, output_file)
+    today = datetime.datetime.now().date()
+
+    if os.path.exists(output_path):
+        with open(output_path, 'r', encoding='utf-8') as file:
+            try:
+                existing_data = json.load(file)
+                existing_items = existing_data.get('items', [])
+                # Keep only items from today
+                existing_items = [item for item in existing_items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
+            except json.JSONDecodeError:
+                logging.warning(f"Failed to decode JSON from {output_path}. Creating a new feed.")
+                existing_items = []
+    else:
+        existing_items = []
+
+    # Add new items from today
+    new_items = [item for item in items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
+    updated_items = existing_items + new_items
+
     feed_data = {
         'title': "RSS Feed Title",
         'link': "https://example.com",
         'description': "RSS Feed Description",
         'lastBuildDate': datetime.datetime.now().isoformat(),
-        'items': items
+        'items': updated_items
     }
 
     try:
-        logging.info(f"Creating JSON feed: {output_path} with {len(items)} items.")
+        logging.info(f"Creating/Updating JSON feed: {output_path} with {len(updated_items)} items.")
         with open(output_path, 'w', encoding='utf-8') as file:
             json.dump(feed_data, file, indent=4)
             logging.info(f"JSON feed successfully written to {output_path}.")
@@ -187,15 +157,7 @@ def send_to_telegram(bot_token, chat_id, message):
         logging.error(f"Failed to send message to Telegram: {e}")
 
 def read_sent_ids(file_path):
-    """
-    Read the set of sent IDs from a file.
-
-    Parameters:
-    file_path (str): The path to the file containing sent IDs.
-
-    Returns:
-    set: A set of sent IDs.
-    """
+    """Read the set of sent IDs from a file."""
     if os.path.exists(file_path):
         with open(file_path, 'r', encoding='utf-8') as file:
             try:
@@ -206,25 +168,12 @@ def read_sent_ids(file_path):
     return set()
 
 def write_sent_ids(file_path, ids):
-    """
-    Write a set of sent IDs to a file.
-
-    Parameters:
-    file_path (str): The path to the file where sent IDs should be written.
-    ids (set): A set of sent IDs.
-    """
+    """Write a set of sent IDs to a file."""
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(list(ids), file)
 
 def process_source(source, bot_token, chat_id):
-    """
-    Process a news source by scraping data, sending messages, and updating sent IDs.
-
-    Parameters:
-    source (dict): A dictionary containing the source URL, selector, output file, and sent IDs file.
-    bot_token (str): The Telegram bot token.
-    chat_id (str): The Telegram chat ID.
-    """
+    """Process a news source by scraping data, sending messages, and updating sent IDs."""
     sent_ids_file_path = os.path.join(script_directory, source['sent_ids_file'])
     sent_ids = read_sent_ids(sent_ids_file_path)
     items = scrape_news(source['url'], source['selector'])
@@ -239,8 +188,8 @@ def process_source(source, bot_token, chat_id):
                 message = f"*{item['title']}*\n\n{item['description']}"
                 send_to_telegram(bot_token, chat_id, message)
 
-            create_json_feed(new_items_to_send, source['output_file'])
-            logging.info(f"JSON feed created successfully: {source['output_file']}")
+            create_or_update_json_feed(new_items_to_send, source['output_file'])
+            logging.info(f"JSON feed created/updated successfully: {source['output_file']}")
 
             new_ids = set(item['link'] for item in new_items_to_send)
             write_sent_ids(sent_ids_file_path, sent_ids.union(new_ids))
@@ -299,12 +248,11 @@ def main():
         }
     ]
 
-    # Process each source
+    logging.info("Starting news scraping process...")
+    random.shuffle(sources)
     for source in sources:
-        logging.info(f"Processing source: {source['url']}")
         process_source(source, bot_token, chat_id)
-        # Wait a few seconds between requests to avoid overwhelming the server
-        time.sleep(random.uniform(1, 3))
+    logging.info("Scraping process completed.")
 
 if __name__ == "__main__":
     main()
