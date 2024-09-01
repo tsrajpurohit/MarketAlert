@@ -5,21 +5,97 @@ import time
 import os
 import json
 import logging
+import random
 from dotenv import load_dotenv
 from logging.handlers import RotatingFileHandler
+from dateutil import parser
 
 # Load environment variables from .env file
 load_dotenv()
 
 # Setup logging to log to both console and file with rotation
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
 file_handler = RotatingFileHandler('scraper.log', maxBytes=10*1024*1024, backupCount=5)
 file_handler.setLevel(logging.INFO)
 file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
 logging.getLogger().addHandler(file_handler)
 
+# Get the directory of the current script to ensure JSON files are created in the same folder
+script_directory = os.path.dirname(os.path.abspath(__file__))
+
+def parse_date(date_str):
+    """
+    Parse a date string into a datetime object.
+
+    Parameters:
+    date_str (str): The date string to parse.
+
+    Returns:
+    datetime.datetime: The parsed date.
+    """
+    try:
+        # Remove 'Updated On :' prefix
+        date_str = date_str.replace('Updated On :', '').strip()
+        # Parse date with fuzzy matching
+        parsed_date = parser.parse(date_str, fuzzy=True)
+        logging.info(f"Parsed date: {parsed_date}")
+        return parsed_date
+    except ValueError as e:
+        logging.error(f"Date parsing error for date_str '{date_str}': {e}")
+        return datetime.datetime.now()
+
+def extract_date(article):
+    """
+    Extract date from an article, handling both <span> and <time> tags.
+
+    Parameters:
+    article (BeautifulSoup object): The article element to extract the date from.
+
+    Returns:
+    str: The extracted date as a string.
+    """
+    date = None
+    # Extract date from <span> or <time> elements
+    date_span = article.find('span')
+    if date_span:
+        date = date_span.get_text(strip=True)
+    date_time = article.find('time')
+    if date_time:
+        date = date_time.get('datetime', None)
+    return date
+
+def dynamic_extract(element, tag_names, attribute_name=None):
+    """
+    Dynamically extract content from an HTML element using a list of possible tags.
+
+    Parameters:
+    element (bs4.element.Tag): The parent element to search within.
+    tag_names (list): List of tag names to look for in the element.
+    attribute_name (str): The attribute to extract (if needed), defaults to None.
+
+    Returns:
+    str: Extracted content or an empty string if none found.
+    """
+    for tag_name in tag_names:
+        target = element.find(tag_name)
+        if target:
+            if attribute_name and target.has_attr(attribute_name):
+                return target.get(attribute_name, '').strip()
+            return target.get_text(strip=True)
+    return ''
+
+
 def scrape_news(url, selector):
+    """
+    Scrape news articles from a given URL and selector.
+
+    Parameters:
+    url (str): The URL to scrape.
+    selector (str): The CSS selector to locate articles.
+
+    Returns:
+    list: A list of dictionaries containing news article data.
+    """
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
         'Accept-Language': 'en-US,en;q=0.9',
@@ -36,17 +112,27 @@ def scrape_news(url, selector):
         items = []
 
         for article in articles:
-            title_tag = article.find('a')
-            title = title_tag.text.strip() if title_tag else 'No title'
-            link = title_tag['href'] if title_tag and title_tag.has_attr('href') else '#'
-            description_tag = article.find('p')
-            description = description_tag.text.strip() if description_tag else title
+            # Dynamically extract title, link, and description
+            title = dynamic_extract(article, ['h2', 'h3', 'a', 'span'])
+            link = dynamic_extract(article, ['a'], 'href')
+            description = dynamic_extract(article, ['p', 'span', 'div'])
+
+            # If title is missing, use description as a fallback
+            if not title:
+                title = description if description else 'No title'
+
+            # Validate and construct link if it is relative
+            if link and not link.startswith('http'):
+                link = requests.compat.urljoin(url, link)
+
+            date_str = extract_date(article)
+            pub_date = parse_date(date_str) if date_str else datetime.datetime.now()
 
             items.append({
                 'title': title,
-                'link': link,
+                'link': link if link else '#',
                 'description': description,
-                'pubDate': datetime.datetime.now().isoformat()
+                'pubDate': pub_date.isoformat()
             })
 
         return items
@@ -55,10 +141,16 @@ def scrape_news(url, selector):
         logging.error(f"Error fetching data from {url}: {e}")
         return []
 
+
 def create_json_feed(items, output_file):
-    main_directory = os.path.dirname(os.path.abspath(__file__))
-    output_path = os.path.join(main_directory, output_file)
-    
+    """
+    Create a JSON feed from a list of items.
+
+    Parameters:
+    items (list): A list of dictionaries containing news article data.
+    output_file (str): The name of the output JSON file.
+    """
+    output_path = os.path.join(script_directory, output_file)
     feed_data = {
         'title': "RSS Feed Title",
         'link': "https://example.com",
@@ -95,38 +187,73 @@ def send_to_telegram(bot_token, chat_id, message):
         logging.error(f"Failed to send message to Telegram: {e}")
 
 def read_sent_ids(file_path):
+    """
+    Read the set of sent IDs from a file.
+
+    Parameters:
+    file_path (str): The path to the file containing sent IDs.
+
+    Returns:
+    set: A set of sent IDs.
+    """
     if os.path.exists(file_path):
         with open(file_path, 'r', encoding='utf-8') as file:
-            return set(json.load(file))
+            try:
+                return set(json.load(file))
+            except json.JSONDecodeError:
+                logging.warning(f"Failed to decode JSON from {file_path}. Returning empty set.")
+                return set()
     return set()
 
 def write_sent_ids(file_path, ids):
+    """
+    Write a set of sent IDs to a file.
+
+    Parameters:
+    file_path (str): The path to the file where sent IDs should be written.
+    ids (set): A set of sent IDs.
+    """
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(list(ids), file)
 
 def process_source(source, bot_token, chat_id):
-    sent_ids = read_sent_ids(source['sent_ids_file'])
+    """
+    Process a news source by scraping data, sending messages, and updating sent IDs.
+
+    Parameters:
+    source (dict): A dictionary containing the source URL, selector, output file, and sent IDs file.
+    bot_token (str): The Telegram bot token.
+    chat_id (str): The Telegram chat ID.
+    """
+    sent_ids_file_path = os.path.join(script_directory, source['sent_ids_file'])
+    sent_ids = read_sent_ids(sent_ids_file_path)
     items = scrape_news(source['url'], source['selector'])
     
     if items:
         today = datetime.datetime.now().date()
         new_items = [item for item in items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
+        new_items_to_send = [item for item in new_items if item['link'] not in sent_ids]
         
-        if new_items:
-            new_items_to_send = [item for item in new_items if item['link'] not in sent_ids]
-            
-            if new_items_to_send:
-                create_json_feed(new_items_to_send, source['output_file'])
-                logging.info(f"JSON feed created successfully: {source['output_file']}")
+        if new_items_to_send:
+            for item in new_items_to_send:
+                message = f"*{item['title']}*\n\n{item['description']}"
+                send_to_telegram(bot_token, chat_id, message)
 
-                new_ids = set(item['link'] for item in new_items_to_send)
-                for item in new_items_to_send:
-                    message = f"*{item['title']}*\n\n{item['description']}"
-                    send_to_telegram(bot_token, chat_id, message)
+            create_json_feed(new_items_to_send, source['output_file'])
+            logging.info(f"JSON feed created successfully: {source['output_file']}")
 
-                write_sent_ids(source['sent_ids_file'], sent_ids.union(new_ids))
+            new_ids = set(item['link'] for item in new_items_to_send)
+            write_sent_ids(sent_ids_file_path, sent_ids.union(new_ids))
+            logging.info(f"Sent alerts updated in {sent_ids_file_path}")
 
 def main():
+    bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
+    chat_id = os.environ.get('TELEGRAM_CHAT_ID')
+
+    if not bot_token or not chat_id:
+        logging.error("Telegram bot token or chat ID is not set. Exiting.")
+        return
+
     sources = [
         {
             'url': "https://www.moneycontrol.com/news/business/stocks/",
@@ -172,18 +299,12 @@ def main():
         }
     ]
 
-    bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
-    chat_id = os.environ.get('TELEGRAM_CHAT_ID')
-
-    if not bot_token or not chat_id:
-        logging.error("Telegram bot token or chat ID is missing.")
-        return
-
-    try:
-        for source in sources:
-            process_source(source, bot_token, chat_id)
-    except Exception as e:
-        logging.error(f"An error occurred: {e}")
+    # Process each source
+    for source in sources:
+        logging.info(f"Processing source: {source['url']}")
+        process_source(source, bot_token, chat_id)
+        # Wait a few seconds between requests to avoid overwhelming the server
+        time.sleep(random.uniform(1, 3))
 
 if __name__ == "__main__":
     main()
