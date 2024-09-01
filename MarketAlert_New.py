@@ -10,8 +10,14 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-# Setup logging
+# Setup logging to log to both console and file
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Add file handler to log messages to a file named 'scraper.log'
+file_handler = logging.FileHandler('scraper.log')
+file_handler.setLevel(logging.INFO)
+file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+logging.getLogger().addHandler(file_handler)
 
 def scrape_news(url, selector):
     headers = {
