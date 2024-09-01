@@ -44,18 +44,20 @@ jobs:
         run: |
           git status
 
-      - name: Stage and commit JSON files
+      - name: Commit files
         run: |
-          git add *.json
-          git status
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Add generated JSON feeds"
-            git push
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Updated logs"
           fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main 
 
       - name: Upload JSON files as artifact
         uses: actions/upload-artifact@v3
