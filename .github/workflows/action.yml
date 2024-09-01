@@ -24,20 +24,23 @@ jobs:
 
       - name: Run scraping script
         run: |
-          python MarketAlert_New.py
+          python MarketAler_New.py
         env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
-      # Commit all generated JSON files to the repository
+      - name: List files for debugging
+        run: |
+          echo "Listing files in the working directory"
+          ls -la
+
       - name: Commit and push JSON files
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          # Add all JSON files to git
+          echo "Listing JSON files for git add"
+          ls *.json
           git add *.json
-          # Check if there are any changes to commit
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
@@ -47,9 +50,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Upload all JSON files as artifacts
       - name: Upload JSON files as artifact
         uses: actions/upload-artifact@v3
         with:
           name: rss-feeds-json
-          path: "*.json"  # Upload all JSON files
+          path: "*.json"
