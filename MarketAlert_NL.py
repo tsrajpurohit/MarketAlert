@@ -144,45 +144,25 @@ def scrape_news(url, selector):
 
 def create_json_feed(items, output_file):
     """
-    Create or update a JSON feed by removing entries older than the current date and adding new entries.
+    Create a JSON feed from a list of items.
 
     Parameters:
     items (list): A list of dictionaries containing news article data.
     output_file (str): The name of the output JSON file.
     """
     output_path = os.path.join(script_directory, output_file)
-
-    # Load existing feed data if it exists
-    if os.path.exists(output_path):
-        try:
-            with open(output_path, 'r', encoding='utf-8') as file:
-                feed_data = json.load(file)
-        except json.JSONDecodeError:
-            logging.warning(f"Failed to decode JSON from {output_path}. Starting with an empty feed.")
-            feed_data = {'items': []}
-    else:
-        feed_data = {'items': []}
-
-    # Filter out items older than the current date
-    current_date = datetime.now().date()
-    updated_items = [item for item in feed_data['items'] if datetime.fromisoformat(item['pubDate']).date() >= current_date]
-
-    # Add new items
-    updated_items.extend(items)
-
-    # Prepare new feed data
-    new_feed_data = {
+    feed_data = {
         'title': "RSS Feed Title",
         'link': "https://example.com",
         'description': "RSS Feed Description",
-        'lastBuildDate': datetime.now().isoformat(),
-        'items': updated_items
+        'lastBuildDate': datetime.datetime.now().isoformat(),
+        'items': items
     }
 
     try:
-        logging.info(f"Creating or updating JSON feed: {output_path} with {len(updated_items)} items.")
+        logging.info(f"Creating JSON feed: {output_path} with {len(items)} items.")
         with open(output_path, 'w', encoding='utf-8') as file:
-            json.dump(new_feed_data, file, indent=4)
+            json.dump(feed_data, file, indent=4)
             logging.info(f"JSON feed successfully written to {output_path}.")
     except Exception as e:
         logging.error(f"Failed to write JSON feed to {output_path}: {e}")
@@ -238,8 +218,8 @@ def write_sent_ids(file_path, ids):
 
 def process_source(source, bot_token, chat_id):
     """
-    Process a news source by scraping data twice, sending messages, and updating sent IDs.
-    
+    Process a news source by scraping data, sending messages, and updating sent IDs.
+
     Parameters:
     source (dict): A dictionary containing the source URL, selector, output file, and sent IDs file.
     bot_token (str): The Telegram bot token.
@@ -247,38 +227,24 @@ def process_source(source, bot_token, chat_id):
     """
     sent_ids_file_path = os.path.join(script_directory, source['sent_ids_file'])
     sent_ids = read_sent_ids(sent_ids_file_path)
-
-    # Scrape news twice to catch any missed updates
-    for attempt in range(2):
-        try:
-            logging.info(f"Attempt {attempt + 1}: Scraping {source['url']}")
-            items = scrape_news(source['url'], source['selector'])
-
-            if items:
-                today = datetime.datetime.now().date()
-                new_items = [item for item in items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
-                new_items_to_send = [item for item in new_items if item['link'] not in sent_ids]
-
-                if new_items_to_send:
-                    for item in new_items_to_send:
-                        message = f"*{item['title']}*\n\n{item['description']}"
-                        send_to_telegram(bot_token, chat_id, message)
-
-                    create_json_feed(new_items_to_send, source['output_file'])
-                    logging.info(f"JSON feed created successfully: {source['output_file']}")
-
-                    new_ids = set(item['link'] for item in new_items_to_send)
-                    write_sent_ids(sent_ids_file_path, sent_ids.union(new_ids))
-                    logging.info(f"Sent alerts updated in {sent_ids_file_path}")
-
-        except Exception as e:
-            logging.error(f"Error processing source {source['url']} on attempt {attempt + 1}: {e}")
+    items = scrape_news(source['url'], source['selector'])
+    
+    if items:
+        today = datetime.datetime.now().date()
+        new_items = [item for item in items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
+        new_items_to_send = [item for item in new_items if item['link'] not in sent_ids]
         
-        # Sleep between attempts to avoid overwhelming the server
-        time.sleep(random.uniform(1, 3))
+        if new_items_to_send:
+            for item in new_items_to_send:
+                message = f"*{item['title']}*\n\n{item['description']}"
+                send_to_telegram(bot_token, chat_id, message)
 
-    # Ensure any missed updates are checked
-    logging.info(f"Completed processing for source: {source['url']}")
+            create_json_feed(new_items_to_send, source['output_file'])
+            logging.info(f"JSON feed created successfully: {source['output_file']}")
+
+            new_ids = set(item['link'] for item in new_items_to_send)
+            write_sent_ids(sent_ids_file_path, sent_ids.union(new_ids))
+            logging.info(f"Sent alerts updated in {sent_ids_file_path}")
 
 def main():
     bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
