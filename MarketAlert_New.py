@@ -54,6 +54,7 @@ def scrape_news(url, selector):
     except requests.exceptions.RequestException as e:
         logging.error(f"Error fetching data from {url}: {e}")
         return []
+print("Current Working Directory:", os.getcwd())
 
 def create_json_feed(items, output_file):
     # Ensure the output file path is set correctly
