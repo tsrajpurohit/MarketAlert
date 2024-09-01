@@ -24,7 +24,7 @@ jobs:
 
       - name: Run scraping script
         run: |
-          python your_script.py
+          python MarketAlert_New.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
