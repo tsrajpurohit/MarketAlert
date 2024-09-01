@@ -117,3 +117,16 @@
 2024-09-01 12:09:20,827 - INFO - Processing source: https://www.business-standard.com/markets/capital-market-news
 2024-09-01 12:09:23,269 - INFO - Processing source: https://www.business-standard.com/topic/ipos
 2024-09-01 12:09:25,953 - INFO - Processing source: https://www.business-standard.com/markets/mutual-fund
+2024-09-01 12:21:18,782 - INFO - Processing source: https://www.moneycontrol.com/news/business/stocks/
+2024-09-01 12:21:21,498 - INFO - Creating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 1 items.
+2024-09-01 12:21:21,499 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-09-01 12:21:21,499 - INFO - JSON feed created successfully: moneycontrol_rss_feed.json
+2024-09-01 12:21:21,499 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-09-01 12:21:24,202 - INFO - Processing source: https://economictimes.indiatimes.com/markets/stocks/earnings/news
+2024-09-01 12:21:24,769 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-01 12:21:26,384 - INFO - Processing source: https://economictimes.indiatimes.com/markets/stocks/news
+2024-09-01 12:21:26,427 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-01 12:21:29,038 - INFO - Processing source: https://www.business-standard.com/markets/news
+2024-09-01 12:21:30,750 - INFO - Processing source: https://www.business-standard.com/markets/capital-market-news
+2024-09-01 12:21:38,181 - INFO - Processing source: https://www.business-standard.com/topic/ipos
+2024-09-01 12:21:39,944 - INFO - Processing source: https://www.business-standard.com/markets/mutual-fund
