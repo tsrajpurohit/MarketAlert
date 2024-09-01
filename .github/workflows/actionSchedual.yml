@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Updated to v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3  # Updated to v3
         with:
           python-version: '3.x'
 
@@ -56,13 +56,13 @@ jobs:
           fi
 
       - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@v0.6.0  # Verify if an updated version is available
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main 
 
       - name: Upload JSON files as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4  # Updated to v4
         with:
           name: rss-feeds-json
           path: "*.json"
