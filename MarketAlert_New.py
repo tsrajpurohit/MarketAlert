@@ -50,6 +50,10 @@ def scrape_news(url, selector):
         return []
 
 def create_json_feed(items, output_file):
+    # Ensure the output file path is set correctly
+    main_directory = os.path.dirname(os.path.abspath(__file__))
+    output_path = os.path.join(main_directory, output_file)
+    
     feed_data = {
         'title': "RSS Feed Title",
         'link': "https://example.com",
@@ -59,14 +63,14 @@ def create_json_feed(items, output_file):
     }
 
     try:
-        logging.info(f"Creating JSON feed: {output_file} with {len(items)} items.")
-        with open(output_file, 'w', encoding='utf-8') as file:
+        print(f"Attempting to save JSON file at: {output_path}")  # Print the intended output path
+        logging.info(f"Creating JSON feed: {output_path} with {len(items)} items.")
+        with open(output_path, 'w', encoding='utf-8') as file:
             json.dump(feed_data, file, indent=4)
-            logging.info(f"JSON feed successfully written to {output_file}.")
+            logging.info(f"JSON feed successfully written to {output_path}.")
     except Exception as e:
-        logging.error(f"Failed to write JSON feed to {output_file}: {e}")
-# Before creating the file, print the intended output path
-print(f"Attempting to save JSON file at: {output_file}")
+        logging.error(f"Failed to write JSON feed to {output_path}: {e}")
+
 
 def send_to_telegram(bot_token, chat_id, message):
     telegram_api_url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
