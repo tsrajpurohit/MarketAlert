@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: '3.1'
 
       - name: Install dependencies
         run: |
@@ -42,13 +42,14 @@ jobs:
           echo "Listing JSON files"
           ls *.json
 
-      - name: Commit and push JSON files
+      - name: Stage and commit JSON files
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          echo "Listing JSON files for git add"
-          ls *.json
+          echo "Staging JSON files for commit"
           git add *.json
+          echo "Checking git status"
+          git status
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
