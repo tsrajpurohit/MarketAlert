@@ -1,0 +1,78 @@
+name: Run Scraper and Save File
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '*/10 * * * *'  # Runs every 10 minutes
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        # Checks out the repository to the runner
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+        # Sets up Python environment
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        # Installs required Python packages
+
+      - name: List files before running script
+        run: |
+          echo "Listing files before running the script"
+          ls -la
+        # Lists files in the repository before running the script
+
+      - name: Run scraping script
+        run: |
+          python MarketAlert_NL.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        # Runs the Python scraping script with environment variables for Telegram
+
+      - name: List files after running script
+        run: |
+          echo "Listing files after running the script"
+          ls -la
+        # Lists files in the repository after running the script
+
+      - name: Check Git status
+        run: |
+          git status
+        # Displays the current status of the Git repository
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Updated logs"
+          fi
+        # Configures Git, stages all changes, and commits if there are modifications
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+        # Pushes the committed changes to the repository
+
+      - name: Upload JSON files as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: rss-feeds-json
+          path: "*.json"
+        # Uploads all JSON files as artifacts for later review
