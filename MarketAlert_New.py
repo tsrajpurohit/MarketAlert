@@ -58,10 +58,15 @@ def create_json_feed(items, output_file):
         'items': items
     }
 
-    logging.info(f"Creating JSON feed: {output_file} with {len(items)} items.")
-    with open(output_file, 'w', encoding='utf-8') as file:
-        json.dump(feed_data, file, indent=4)
-        logging.info(f"JSON feed successfully written to {output_file}.")
+    try:
+        logging.info(f"Creating JSON feed: {output_file} with {len(items)} items.")
+        with open(output_file, 'w', encoding='utf-8') as file:
+            json.dump(feed_data, file, indent=4)
+            logging.info(f"JSON feed successfully written to {output_file}.")
+    except Exception as e:
+        logging.error(f"Failed to write JSON feed to {output_file}: {e}")
+# Before creating the file, print the intended output path
+print(f"Attempting to save JSON file at: {output_file}")
 
 def send_to_telegram(bot_token, chat_id, message):
     telegram_api_url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
