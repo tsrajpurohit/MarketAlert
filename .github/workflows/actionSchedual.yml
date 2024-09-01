@@ -62,7 +62,7 @@ jobs:
           branch: main 
 
       - name: Upload JSON files as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: rss-feeds-json
           path: "*.json"
