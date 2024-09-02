@@ -870,3 +870,19 @@
 2024-09-02 08:10:03,736 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
 2024-09-02 08:10:06,145 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-02 08:10:06,149 - INFO - Scraping process completed.
+2024-09-02 08:32:48,130 - INFO - Starting news scraping process...
+2024-09-02 08:32:50,557 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-02 08:32:51,941 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 41 items.
+2024-09-02 08:32:51,942 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2024-09-02 08:32:51,942 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2024-09-02 08:32:51,942 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2024-09-02 08:32:53,679 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 34 items.
+2024-09-02 08:32:53,679 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-09-02 08:32:53,680 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-09-02 08:32:53,680 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-09-02 08:32:54,052 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-02 08:32:58,368 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 49 items.
+2024-09-02 08:32:58,368 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2024-09-02 08:32:58,369 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2024-09-02 08:32:58,369 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2024-09-02 08:32:58,369 - INFO - Scraping process completed.
