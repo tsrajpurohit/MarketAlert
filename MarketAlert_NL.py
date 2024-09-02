@@ -210,6 +210,12 @@ def main():
             'output_file': "moneycontrol_rss_feed.json",
             'sent_ids_file': 'moneycontrol_sent_ids.json'
         },
+         {
+            'url': "https://www.moneycontrol.com/news/business/companies/",
+            'selector': 'li.clearfix',
+            'output_file': "moneycontrol_companies_rss_feed.json",
+            'sent_ids_file': 'moneycontrol__companies_sent_ids.json'
+        },
         {
             'url': "https://economictimes.indiatimes.com/markets/stocks/earnings/news",
             'selector': 'div.eachStory',
