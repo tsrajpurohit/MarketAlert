@@ -1630,3 +1630,11 @@
 2024-09-03 08:54:33,231 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
 2024-09-03 08:54:33,231 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
 2024-09-03 08:54:33,231 - INFO - Scraping process completed.
+2024-09-03 09:16:00,385 - INFO - Starting news scraping process...
+2024-09-03 09:16:05,754 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-03 09:16:06,902 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-03 09:16:33,888 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 33 items.
+2024-09-03 09:16:33,889 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2024-09-03 09:16:33,889 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2024-09-03 09:16:33,889 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2024-09-03 09:16:33,889 - INFO - Scraping process completed.
