@@ -3215,3 +3215,11 @@
 2024-09-05 13:41:35,198 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-05 13:41:36,124 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-05 13:41:39,482 - INFO - Scraping process completed.
+2024-09-05 13:52:27,449 - INFO - Starting news scraping process...
+2024-09-05 13:52:38,332 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-05 13:52:38,767 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-05 13:52:42,531 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 44 items.
+2024-09-05 13:52:42,531 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2024-09-05 13:52:42,532 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2024-09-05 13:52:42,532 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2024-09-05 13:52:43,210 - INFO - Scraping process completed.
