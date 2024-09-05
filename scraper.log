@@ -3401,3 +3401,9 @@
 2024-09-05 20:57:22,339 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
 2024-09-05 20:57:22,365 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
 2024-09-05 20:57:23,578 - INFO - Scraping process completed.
+2024-09-05 21:19:11,570 - INFO - Starting news scraping process...
+2024-09-05 21:21:24,601 - ERROR - Error fetching data from https://economictimes.indiatimes.com/markets/stocks/earnings/news: ('Connection broken: IncompleteRead(24576 bytes read, 28758 more expected)', IncompleteRead(24576 bytes read, 28758 more expected))
+2024-09-05 21:21:24,748 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2024-09-05 21:21:26,578 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-05 21:21:27,636 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2024-09-05 21:21:27,636 - INFO - Scraping process completed.
