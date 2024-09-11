@@ -6482,3 +6482,11 @@
 2024-09-11 02:47:39,249 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
 2024-09-11 02:47:39,249 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2024-09-11 02:47:39,249 - INFO - Scraping process completed.
+2024-09-11 02:59:53,785 - INFO - Starting news scraping process...
+2024-09-11 03:00:04,489 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 8 items.
+2024-09-11 03:00:04,489 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-09-11 03:00:04,490 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-09-11 03:00:04,490 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-09-11 03:00:06,017 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-11 03:00:08,297 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-11 03:00:10,379 - INFO - Scraping process completed.
