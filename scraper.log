@@ -6915,3 +6915,11 @@
 2024-09-11 13:40:33,196 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-11 13:40:35,056 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-11 13:40:35,232 - INFO - Scraping process completed.
+2024-09-11 13:51:13,860 - INFO - Starting news scraping process...
+2024-09-11 13:51:17,400 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-11 13:51:19,073 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-11 13:51:23,390 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 36 items.
+2024-09-11 13:51:23,391 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-09-11 13:51:23,391 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-09-11 13:51:23,391 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-09-11 13:51:23,392 - INFO - Scraping process completed.
