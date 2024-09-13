@@ -8001,3 +8001,15 @@
 2024-09-13 04:16:00,158 - INFO - JSON feed created/updated successfully: businessstandard_ipos_rss_feed.json
 2024-09-13 04:16:00,159 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_sent_ids.json
 2024-09-13 04:16:00,159 - INFO - Scraping process completed.
+2024-09-13 04:34:59,593 - INFO - Starting news scraping process...
+2024-09-13 04:35:03,849 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-13 04:35:04,168 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-13 04:35:05,843 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 12 items.
+2024-09-13 04:35:05,843 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2024-09-13 04:35:05,843 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2024-09-13 04:35:05,844 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2024-09-13 04:35:17,719 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 12 items.
+2024-09-13 04:35:17,719 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2024-09-13 04:35:17,719 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2024-09-13 04:35:17,720 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2024-09-13 04:35:17,720 - INFO - Scraping process completed.
