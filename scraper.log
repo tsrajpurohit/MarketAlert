@@ -8951,3 +8951,10 @@
 2024-09-14 17:41:43,926 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-14 17:41:47,485 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-14 17:41:47,489 - INFO - Scraping process completed.
+2024-09-14 17:52:23,303 - INFO - Starting news scraping process...
+2024-09-14 17:52:28,371 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-14 17:52:47,737 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 16 items.
+2024-09-14 17:52:47,737 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2024-09-14 17:52:47,738 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2024-09-14 17:52:47,738 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2024-09-14 17:52:49,194 - INFO - Scraping process completed.
