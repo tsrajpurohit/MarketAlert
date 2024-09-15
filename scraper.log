@@ -9144,3 +9144,11 @@
 2024-09-15 04:40:11,347 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-15 04:40:11,757 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-15 04:40:12,557 - INFO - Scraping process completed.
+2024-09-15 04:50:45,641 - INFO - Starting news scraping process...
+2024-09-15 04:50:50,532 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-15 04:50:50,799 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-15 04:50:53,952 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 1 items.
+2024-09-15 04:50:53,952 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2024-09-15 04:50:53,952 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2024-09-15 04:50:53,953 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2024-09-15 04:50:53,953 - INFO - Scraping process completed.
