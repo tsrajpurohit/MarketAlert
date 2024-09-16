@@ -9592,3 +9592,14 @@
 2024-09-16 03:40:10,802 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
 2024-09-16 03:40:10,802 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
 2024-09-16 03:40:12,180 - INFO - Scraping process completed.
+2024-09-16 03:51:05,305 - INFO - Starting news scraping process...
+2024-09-16 03:52:08,131 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 504 Server Error: Gateway Time-out for url: https://www.business-standard.com/markets/news
+2024-09-16 03:53:08,889 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 504 Server Error: Gateway Time-out for url: https://www.business-standard.com/topic/ipos
+2024-09-16 03:54:09,648 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 504 Server Error: Gateway Time-out for url: https://www.business-standard.com/markets/capital-market-news
+2024-09-16 03:54:10,090 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-16 03:55:11,568 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-16 03:55:13,609 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 13 items.
+2024-09-16 03:55:13,609 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-09-16 03:55:13,610 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-09-16 03:55:13,610 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-09-16 03:55:13,610 - INFO - Scraping process completed.
