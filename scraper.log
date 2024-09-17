@@ -10660,3 +10660,14 @@
 2024-09-17 12:38:14,558 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
 2024-09-17 12:38:14,559 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
 2024-09-17 12:38:15,117 - INFO - Scraping process completed.
+2024-09-17 13:03:28,213 - INFO - Starting news scraping process...
+2024-09-17 13:03:29,487 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-17 13:03:35,327 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 71 items.
+2024-09-17 13:03:35,327 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2024-09-17 13:03:35,328 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2024-09-17 13:03:35,329 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2024-09-17 13:03:58,317 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 16 items.
+2024-09-17 13:03:58,317 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2024-09-17 13:03:58,317 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2024-09-17 13:03:58,318 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2024-09-17 13:04:04,125 - INFO - Scraping process completed.
