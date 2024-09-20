@@ -12299,3 +12299,16 @@
 2024-09-20 02:19:16,449 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
 2024-09-20 02:19:17,722 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-20 02:19:18,645 - INFO - Scraping process completed.
+2024-09-20 02:56:39,568 - INFO - Starting news scraping process...
+2024-09-20 02:57:39,991 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 504 Server Error: Gateway Time-out for url: https://www.business-standard.com/markets/capital-market-news
+2024-09-20 02:57:51,254 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 5 items.
+2024-09-20 02:57:51,255 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2024-09-20 02:57:51,255 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2024-09-20 02:57:51,256 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2024-09-20 02:57:52,754 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-20 02:57:58,592 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 8 items.
+2024-09-20 02:57:58,593 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-09-20 02:57:58,593 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-09-20 02:57:58,594 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-09-20 02:57:59,001 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-20 02:57:59,005 - INFO - Scraping process completed.
