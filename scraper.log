@@ -17845,3 +17845,15 @@
 2024-09-27 10:10:56,956 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-27 10:11:00,658 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-27 10:11:02,638 - INFO - Scraping process completed.
+2024-09-27 10:32:54,787 - INFO - Starting news scraping process...
+2024-09-27 10:32:57,626 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-27 10:32:59,443 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 29 items.
+2024-09-27 10:32:59,445 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-09-27 10:32:59,445 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-09-27 10:32:59,446 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-09-27 10:32:59,762 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-27 10:33:05,681 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_companies_rss_feed.json with 2 items.
+2024-09-27 10:33:05,681 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_companies_rss_feed.json.
+2024-09-27 10:33:05,682 - INFO - JSON feed created/updated successfully: moneycontrol_companies_rss_feed.json
+2024-09-27 10:33:05,682 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol__companies_sent_ids.json
+2024-09-27 10:33:05,830 - INFO - Scraping process completed.
