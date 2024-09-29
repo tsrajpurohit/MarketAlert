@@ -19090,3 +19090,8 @@
 2024-09-29 13:44:43,081 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-29 13:44:44,167 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-29 13:44:44,239 - INFO - Scraping process completed.
+2024-09-29 13:52:13,968 - INFO - Starting news scraping process...
+2024-09-29 13:52:15,504 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-29 13:52:17,507 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-29 13:53:19,149 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 504 Server Error: Gateway Time-out for url: https://www.business-standard.com/markets/capital-market-news
+2024-09-29 13:53:19,149 - INFO - Scraping process completed.
