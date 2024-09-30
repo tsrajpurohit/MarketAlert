@@ -19621,3 +19621,23 @@
 2024-09-30 07:00:34,417 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-30 07:00:36,520 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-09-30 07:00:36,524 - INFO - Scraping process completed.
+2024-09-30 07:21:51,185 - INFO - Starting news scraping process...
+2024-09-30 07:21:57,156 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json with 4 items.
+2024-09-30 07:21:57,157 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json.
+2024-09-30 07:21:57,157 - INFO - JSON feed created/updated successfully: businessstandard_ipos_rss_feed.json
+2024-09-30 07:21:57,157 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_sent_ids.json
+2024-09-30 07:22:00,222 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 34 items.
+2024-09-30 07:22:00,222 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2024-09-30 07:22:00,223 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2024-09-30 07:22:00,224 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2024-09-30 07:22:00,597 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-30 07:22:00,884 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-09-30 07:22:03,437 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 28 items.
+2024-09-30 07:22:03,438 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-09-30 07:22:03,438 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-09-30 07:22:03,439 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-09-30 07:22:04,990 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 29 items.
+2024-09-30 07:22:04,990 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2024-09-30 07:22:04,991 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2024-09-30 07:22:04,991 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2024-09-30 07:22:04,992 - INFO - Scraping process completed.
