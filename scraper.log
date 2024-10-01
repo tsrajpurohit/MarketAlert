@@ -20391,3 +20391,19 @@
 2024-10-01 07:08:36,217 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
 2024-10-01 07:08:36,217 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2024-10-01 07:08:36,217 - INFO - Scraping process completed.
+2024-10-01 07:25:10,674 - INFO - Starting news scraping process...
+2024-10-01 07:25:12,369 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-10-01 07:25:15,798 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_companies_rss_feed.json with 3 items.
+2024-10-01 07:25:15,798 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_companies_rss_feed.json.
+2024-10-01 07:25:15,798 - INFO - JSON feed created/updated successfully: moneycontrol_companies_rss_feed.json
+2024-10-01 07:25:15,799 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol__companies_sent_ids.json
+2024-10-01 07:25:20,587 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 27 items.
+2024-10-01 07:25:20,588 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2024-10-01 07:25:20,588 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2024-10-01 07:25:20,589 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2024-10-01 07:25:21,556 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-10-01 07:25:26,303 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 35 items.
+2024-10-01 07:25:26,304 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-10-01 07:25:26,304 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-10-01 07:25:26,306 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-10-01 07:25:26,306 - INFO - Scraping process completed.
