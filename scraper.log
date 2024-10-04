@@ -22250,3 +22250,10 @@
 2024-10-04 02:55:32,732 - INFO - JSON feed created/updated successfully: moneycontrol_companies_rss_feed.json
 2024-10-04 02:55:32,732 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol__companies_sent_ids.json
 2024-10-04 02:55:32,779 - INFO - Scraping process completed.
+2024-10-04 03:17:04,986 - INFO - Starting news scraping process...
+2024-10-04 03:17:06,470 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-10-04 03:17:10,158 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 1 items.
+2024-10-04 03:17:10,159 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2024-10-04 03:17:10,161 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2024-10-04 03:17:10,161 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2024-10-04 03:17:10,722 - INFO - Scraping process completed.
