@@ -25791,3 +25791,18 @@
 2024-10-09 03:54:56,003 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
 2024-10-09 03:54:56,296 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-10-09 03:54:56,299 - INFO - Scraping process completed.
+2024-10-09 04:13:04,163 - INFO - Starting news scraping process...
+2024-10-09 04:13:08,115 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 12 items.
+2024-10-09 04:13:08,115 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2024-10-09 04:13:08,116 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2024-10-09 04:13:08,118 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2024-10-09 04:13:15,873 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 6 items.
+2024-10-09 04:13:15,873 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2024-10-09 04:13:15,873 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2024-10-09 04:13:15,874 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2024-10-09 04:13:30,736 - WARNING - Rate limit exceeded. Waiting before retrying...
+2024-10-09 04:14:32,170 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 30 items.
+2024-10-09 04:14:32,170 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2024-10-09 04:14:32,171 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2024-10-09 04:14:32,171 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2024-10-09 04:14:35,369 - INFO - Scraping process completed.
