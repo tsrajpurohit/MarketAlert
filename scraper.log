@@ -27977,3 +27977,9 @@
 2024-10-11 20:50:14,393 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-10-11 20:50:17,032 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-10-11 20:50:17,036 - INFO - Scraping process completed.
+2024-10-11 20:58:25,464 - INFO - Starting news scraping process...
+2024-10-11 20:58:25,635 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2024-10-11 20:58:29,666 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-10-11 20:58:30,065 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-10-11 20:58:30,307 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2024-10-11 20:58:31,104 - INFO - Scraping process completed.
