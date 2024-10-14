@@ -29130,3 +29130,15 @@
 2024-10-14 01:01:15,921 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
 2024-10-14 01:01:16,595 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-10-14 01:01:16,692 - INFO - Scraping process completed.
+2024-10-14 02:22:14,274 - INFO - Starting news scraping process...
+2024-10-14 02:22:15,964 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-10-14 02:22:18,174 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 4 items.
+2024-10-14 02:22:18,174 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2024-10-14 02:22:18,174 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2024-10-14 02:22:18,175 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2024-10-14 02:22:23,030 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 4 items.
+2024-10-14 02:22:23,030 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-10-14 02:22:23,030 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-10-14 02:22:23,032 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-10-14 02:22:23,066 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-10-14 02:22:24,596 - INFO - Scraping process completed.
