@@ -31830,3 +31830,15 @@
 2024-10-17 07:19:27,326 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2024-10-17 07:19:27,348 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
 2024-10-17 07:19:27,348 - INFO - Scraping process completed.
+2024-10-17 07:31:19,790 - INFO - Starting news scraping process...
+2024-10-17 07:31:19,909 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2024-10-17 07:31:21,440 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-10-17 07:31:21,466 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2024-10-17 07:31:25,044 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 31 items.
+2024-10-17 07:31:25,046 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-10-17 07:31:25,046 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-10-17 07:31:25,048 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-10-17 07:31:25,360 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-10-17 07:31:25,415 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2024-10-17 07:31:25,520 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2024-10-17 07:31:26,417 - INFO - Scraping process completed.
