@@ -175,7 +175,7 @@ def write_sent_ids(file_path, ids):
 def process_source(source, bot_token, chat_id):
     """Process a news source by scraping data, sending messages, and updating sent IDs."""
     # Keywords to exclude
-    exclude_keywords = ["KR Choksey", "Lilladher","motilal","ICICI Securities","Sharekhan","straight session","Anand Rathi"]
+    exclude_keywords = ["KR Choksey", "Lilladher","motilal","ICICI Securities","Sharekhan","straight session","Anand Rathi","Emkay"]
 
     sent_ids_file_path = os.path.join(script_directory, source['sent_ids_file'])
     sent_ids = read_sent_ids(sent_ids_file_path)
