@@ -17384,3 +17384,19 @@
 2024-12-23 09:31:26,588 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
 2024-12-23 09:31:26,591 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
 2024-12-23 09:31:26,591 - INFO - Scraping process completed.
+2024-12-23 09:40:31,201 - INFO - Starting news scraping process...
+2024-12-23 09:40:31,283 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2024-12-23 09:40:32,806 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-12-23 09:40:32,834 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2024-12-23 09:40:34,418 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_companies_rss_feed.json with 3 items.
+2024-12-23 09:40:34,419 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_companies_rss_feed.json.
+2024-12-23 09:40:34,419 - INFO - JSON feed created/updated successfully: moneycontrol_companies_rss_feed.json
+2024-12-23 09:40:34,419 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol__companies_sent_ids.json
+2024-12-23 09:40:34,440 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2024-12-23 09:40:34,764 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-12-23 09:40:34,790 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2024-12-23 09:40:35,651 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 20 items.
+2024-12-23 09:40:35,651 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-12-23 09:40:35,651 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-12-23 09:40:35,654 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-12-23 09:40:35,654 - INFO - Scraping process completed.
