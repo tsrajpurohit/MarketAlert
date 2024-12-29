@@ -23642,3 +23642,15 @@
 2024-12-29 15:59:27,161 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
 2024-12-29 15:59:27,185 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
 2024-12-29 15:59:27,185 - INFO - Scraping process completed.
+2024-12-29 16:22:05,926 - INFO - Starting news scraping process...
+2024-12-29 16:22:06,638 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2024-12-29 16:22:06,673 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2024-12-29 16:22:08,180 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-12-29 16:22:09,761 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 1 items.
+2024-12-29 16:22:09,761 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2024-12-29 16:22:09,761 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2024-12-29 16:22:09,764 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2024-12-29 16:22:09,800 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2024-12-29 16:22:09,833 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2024-12-29 16:22:10,099 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-12-29 16:22:10,103 - INFO - Scraping process completed.
