@@ -26646,3 +26646,11 @@
 2025-01-01 14:53:13,247 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2025-01-01 14:53:13,736 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2025-01-01 14:53:13,740 - INFO - Scraping process completed.
+2025-01-01 15:06:58,492 - INFO - Starting news scraping process...
+2025-01-01 15:07:00,490 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-01-01 15:07:00,642 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2025-01-01 15:07:00,688 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2025-01-01 15:07:01,275 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2025-01-01 15:07:01,554 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-01-01 15:07:01,594 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2025-01-01 15:07:02,039 - INFO - Scraping process completed.
