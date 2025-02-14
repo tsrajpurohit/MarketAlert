@@ -3306,3 +3306,13 @@
 2025-02-14 21:24:59,558 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
 2025-02-14 21:24:59,592 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
 2025-02-14 21:24:59,592 - INFO - Scraping process completed.
+2025-02-14 21:33:37,172 - INFO - Starting news scraping process...
+2025-02-14 21:33:37,242 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2025-02-14 21:33:37,412 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2025-02-14 21:33:37,430 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2025-02-14 21:33:37,455 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2025-02-14 21:33:37,478 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2025-02-14 21:33:37,496 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2025-02-14 21:33:38,301 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-02-14 21:33:40,915 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-02-14 21:33:40,920 - INFO - Scraping process completed.
