@@ -15172,3 +15172,16 @@
 2025-05-12 14:41:47,582 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
 2025-05-12 14:41:47,586 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
 2025-05-12 14:41:47,587 - INFO - Scraping process completed.
+2025-05-12 14:52:53,318 - INFO - Starting news scraping process...
+2025-05-12 14:52:53,399 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2025-05-12 14:52:56,064 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-05-12 14:53:03,604 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 22 items.
+2025-05-12 14:53:03,604 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2025-05-12 14:53:03,604 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2025-05-12 14:53:03,606 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2025-05-12 14:53:03,621 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2025-05-12 14:53:04,427 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-05-12 14:53:04,446 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2025-05-12 14:53:05,299 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-05-12 14:53:05,320 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2025-05-12 14:53:05,320 - INFO - Scraping process completed.
