@@ -1096,3 +1096,19 @@
 2025-07-22 14:01:18,420 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2025-07-22 14:01:18,703 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2025-07-22 14:01:18,707 - INFO - Scraping process completed.
+2025-07-22 14:28:08,468 - INFO - Starting news scraping process...
+2025-07-22 14:28:08,547 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2025-07-22 14:28:08,583 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2025-07-22 14:28:10,152 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-22 14:28:29,587 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 35 items.
+2025-07-22 14:28:29,587 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2025-07-22 14:28:29,587 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2025-07-22 14:28:29,594 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2025-07-22 14:28:31,831 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_companies_rss_feed.json with 6 items.
+2025-07-22 14:28:31,831 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_companies_rss_feed.json.
+2025-07-22 14:28:31,832 - INFO - JSON feed created/updated successfully: moneycontrol_companies_rss_feed.json
+2025-07-22 14:28:31,833 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol__companies_sent_ids.json
+2025-07-22 14:28:31,986 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2025-07-22 14:28:32,024 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2025-07-22 14:28:32,437 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-07-22 14:28:32,441 - INFO - Scraping process completed.
