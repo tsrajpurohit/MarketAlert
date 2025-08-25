@@ -26273,3 +26273,16 @@
 2025-08-25 13:07:48,713 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
 2025-08-25 13:07:48,776 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2025-08-25 13:07:48,780 - INFO - Scraping process completed.
+2025-08-25 13:38:36,045 - INFO - Starting news scraping process...
+2025-08-25 13:38:38,653 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-08-25 13:38:38,844 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2025-08-25 13:38:38,965 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2025-08-25 13:38:39,016 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2025-08-25 13:39:00,636 - WARNING - Rate limit exceeded. Waiting before retrying...
+2025-08-25 13:40:02,230 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 48 items.
+2025-08-25 13:40:02,231 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2025-08-25 13:40:02,231 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2025-08-25 13:40:02,236 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2025-08-25 13:40:03,417 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-08-25 13:40:03,540 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2025-08-25 13:40:03,945 - INFO - Scraping process completed.
