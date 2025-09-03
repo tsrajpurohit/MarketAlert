@@ -9,6 +9,7 @@ import random
 from dotenv import load_dotenv
 from logging.handlers import RotatingFileHandler
 from dateutil import parser
+import cloudscraper
 
 # Load environment variables from .env file
 load_dotenv()
@@ -71,35 +72,51 @@ def scrape_news(url, selector):
 
 
     try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()
-        response.encoding = 'utf-8'
-        soup = BeautifulSoup(response.text, 'html.parser')
+        response = None
 
+        # Try cloudscraper first for Business Standard
+        if "business-standard.com" in url:
+            try:
+                import cloudscraper
+                scraper = cloudscraper.create_scraper()
+                response = scraper.get(url, headers=headers, timeout=15)
+                logging.info(f"Fetched {url} using cloudscraper")
+            except Exception as cs_err:
+                logging.warning(f"Cloudscraper failed for {url}: {cs_err}. Retrying with requests...")
+                response = requests.get(url, headers=headers, timeout=15)
+        else:
+            response = requests.get(url, headers=headers, timeout=15)
+
+        response.raise_for_status()
+        response.encoding = "utf-8"  # Force UTF-8 decoding
+        soup = BeautifulSoup(response.text, "html.parser")
 
         articles = soup.select(selector)
         items = []
 
         for article in articles:
-            title = dynamic_extract(article, ['h2', 'h3', 'a', 'span'])
-            link = dynamic_extract(article, ['a'], 'href')
-            description = dynamic_extract(article, ['p', 'span', 'div'])
+            title = dynamic_extract(article, ["h2", "h3", "a", "span"])
+            link = dynamic_extract(article, ["a"], "href")
+            description = dynamic_extract(article, ["p", "span", "div"])
 
             if not title:
-                title = description if description else 'No title'
+                title = description if description else "No title"
 
-            if link and not link.startswith('http'):
+            if link and not link.startswith("http"):
                 link = requests.compat.urljoin(url, link)
 
             date_str = extract_date(article)
             pub_date = parse_date(date_str) if date_str else datetime.datetime.now()
 
             items.append({
-                'title': title,
-                'link': link if link else '#',
-                'description': description,
-                'pubDate': pub_date.isoformat()
+                "title": title,
+                "link": link if link else "#",
+                "description": description,
+                "pubDate": pub_date.isoformat()
             })
+
+        # Sleep a bit to avoid rate limiting
+        time.sleep(random.uniform(2, 5))
 
         return items
 
