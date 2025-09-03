@@ -11,8 +11,6 @@ from logging.handlers import RotatingFileHandler
 from dateutil import parser
 import feedparser
 
-
-
 # Load environment variables
 load_dotenv()
 
@@ -63,9 +61,6 @@ def scrape_news(url, selector):
         "Referer": "https://www.google.com/",
         "Connection": "keep-alive",
         "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "cross-site",
     }
     try:
         response = requests.get(url, headers=headers, timeout=15)
@@ -83,11 +78,17 @@ def scrape_news(url, selector):
                 link = requests.compat.urljoin(url, link)
             date_str = extract_date(article)
             pub_date = parse_date(date_str) if date_str else datetime.datetime.now()
+            
+            # Try to extract image
+            img_tag = article.find('img')
+            image_url = img_tag['src'] if img_tag and img_tag.has_attr('src') else ""
+            
             items.append({
                 'title': title,
                 'link': link or '#',
                 'description': description,
-                'pubDate': pub_date.isoformat()
+                'pubDate': pub_date.isoformat(),
+                'image': image_url
             })
         return items
     except requests.exceptions.RequestException as e:
@@ -96,21 +97,22 @@ def scrape_news(url, selector):
 
 # ---------- Scrape Business Standard via RSS ----------
 
-# For RSS sources (Business Standard)
 def scrape_bs_rss(rss_url):
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     try:
         resp = requests.get(rss_url, headers=headers, timeout=10)
         resp.raise_for_status()
     except Exception as e:
-        print(f"⚠️ Error fetching RSS {rss_url}: {e}")
+        logging.error(f"⚠️ Error fetching RSS {rss_url}: {e}")
         return []
 
     feed = feedparser.parse(resp.text)
-    items = []
+    if not feed.entries:
+        logging.warning(f"RSS feed empty or parsing failed for {rss_url}. Status: {resp.status_code}, Length: {len(resp.text)}")
+        return []
 
+    items = []
     for entry in feed.entries:
-        # Date parsing
         pub_date = entry.get("published", entry.get("updated", datetime.datetime.now().isoformat()))
         try:
             pub_date_parsed = parser.parse(pub_date)
@@ -118,7 +120,6 @@ def scrape_bs_rss(rss_url):
         except Exception:
             pub_date_iso = datetime.datetime.now().isoformat()
 
-        # Extract image
         image_url = ""
         if "media_content" in entry and len(entry.media_content) > 0:
             image_url = entry.media_content[0].get("url", "")
@@ -139,8 +140,6 @@ def scrape_bs_rss(rss_url):
         })
 
     return items
-
-
 
 # ---------- JSON Feed & Telegram ----------
 
@@ -184,26 +183,29 @@ def create_or_update_json_feed(items, output_file):
 def send_to_telegram(bot_token, chat_id, message, image_url=None):
     if image_url:
         try:
+            photo_resp = requests.get(image_url, stream=True, timeout=10)
+            photo_resp.raise_for_status()
+            files = {'photo': ('image.jpg', photo_resp.content)}
             response = requests.post(
                 f'https://api.telegram.org/bot{bot_token}/sendPhoto',
-                data={'chat_id': chat_id, 'caption': message, 'parse_mode': 'Markdown'},
-                files={'photo': requests.get(image_url, stream=True).raw}
+                data={'chat_id': chat_id, 'caption': message[:1024], 'parse_mode': 'Markdown'},
+                files=files
             )
             response.raise_for_status()
             return
         except Exception as e:
             logging.warning(f"Failed to send image, sending text only: {e}")
 
-    # fallback to text only
     try:
         response = requests.post(
             f'https://api.telegram.org/bot{bot_token}/sendMessage',
-            data={'chat_id': chat_id, 'text': message, 'parse_mode': 'Markdown'}
+            data={'chat_id': chat_id, 'text': message[:4096], 'parse_mode': 'Markdown'}
         )
         response.raise_for_status()
     except Exception as e:
         logging.error(f"Failed to send Telegram message: {e}")
 
+# ---------- Sent IDs Handling ----------
 
 def read_sent_ids(file_path):
     if os.path.exists(file_path):
@@ -224,7 +226,6 @@ def process_source(source, bot_token, chat_id):
     sent_ids_file_path = os.path.join(script_directory, source['sent_ids_file'])
     sent_ids = read_sent_ids(sent_ids_file_path)
     
-    # Scrape source
     try:
         if source.get('rss', False):
             items = scrape_bs_rss(source['url'])
@@ -236,35 +237,30 @@ def process_source(source, bot_token, chat_id):
         logging.error(f"Failed to scrape {source['url']}: {e}")
         return
     
-    # Filter today's items
     today = datetime.datetime.now().date()
     new_items = [item for item in items if parser.parse(item['pubDate']).date() == today]
     logging.info(f"{len(new_items)} new items found today at {source['url']}")
     
-    # Apply keyword filter
     filtered_items = [
         item for item in new_items
         if not any(k.lower() in (item['title'] + " " + item['description']).lower() for k in exclude_keywords)
     ]
     logging.info(f"{len(filtered_items)} items remaining after applying exclude_keywords filter")
     
-    # Exclude already sent items
     to_send = [item for item in filtered_items if item['link'] not in sent_ids]
     logging.info(f"{len(to_send)} items to send (not sent before)")
     
-    # Send messages to Telegram
     for item in to_send:
-        message = f"*{item['title']}*\n\n{item['description']}\n\n@Stock_Market_News_Buzz"
-        send_to_telegram(bot_token, chat_id, message, item.get('image'))
+        caption = f"*{item['title']}*\n\n{item['description']}\n\n@Stock_Market_News_Buzz"
+        if len(caption) > 1024:
+            caption = caption[:1000] + "...\n\n@Stock_Market_News_Buzz"
+        send_to_telegram(bot_token, chat_id, caption, item.get('image'))
     
-    # Update JSON feed and sent IDs
     if to_send:
         create_or_update_json_feed(to_send, source['output_file'])
         new_ids = set(item['link'] for item in to_send)
         write_sent_ids(sent_ids_file_path, sent_ids.union(new_ids))
         logging.info(f"JSON feed updated and sent IDs recorded for {source['url']}")
-
-
 
 # ---------- Main ----------
 
@@ -276,19 +272,16 @@ def main():
         return
 
     sources = [
-        # Moneycontrol
         {'url': "https://www.moneycontrol.com/news/business/stocks/", 'selector': 'li.clearfix',
          'output_file': "moneycontrol_rss_feed.json", 'sent_ids_file': 'moneycontrol_sent_ids.json'},
         {'url': "https://www.moneycontrol.com/news/business/companies/", 'selector': 'li.clearfix',
-         'output_file': "moneycontrol_companies_rss_feed.json", 'sent_ids_file': 'moneycontrol__companies_sent_ids.json'},
-        # ET
+         'output_file': "moneycontrol_companies_rss_feed.json", 'sent_ids_file': 'moneycontrol_companies_sent_ids.json'},
         {'url': "https://economictimes.indiatimes.com/markets/stocks/earnings/news", 'selector': 'div.eachStory',
          'output_file': "economictimes_earnings_rss_feed.json", 'sent_ids_file': 'economictimes_earnings_sent_ids.json'},
         {'url': "https://economictimes.indiatimes.com/markets/stocks/news", 'selector': 'div.eachStory',
          'output_file': "economictimes_stocks_rss_feed.json", 'sent_ids_file': 'economictimes_stocks_sent_ids.json'},
     ]
 
-    # Add Business Standard RSS sources
     bs_sources = [
         {'url': "https://www.business-standard.com/rss/industry/news-21705.rss", 'rss': True,
          'output_file': "bs_industry_news_rss_feed.json", 'sent_ids_file': "bs_industry_news_sent_ids.json"},
@@ -302,7 +295,6 @@ def main():
          'output_file': "bs_top_stories_rss_feed.json", 'sent_ids_file': "bs_top_stories_sent_ids.json"},
     ]
 
-    # Merge all sources
     sources.extend(bs_sources)
 
     logging.info("Starting news scraping process...")
@@ -310,7 +302,6 @@ def main():
     for source in sources:
         process_source(source, bot_token, chat_id)
     logging.info("Scraping process completed.")
-
 
 if __name__ == "__main__":
     main()
