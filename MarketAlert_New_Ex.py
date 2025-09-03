@@ -265,7 +265,7 @@ def main():
         {'url': "https://economictimes.indiatimes.com/markets/stocks/earnings/news", 'selector': 'div.eachStory', 'output_file': "economictimes_earnings_rss_feed.json", 'sent_ids_file': 'economictimes_earnings_sent_ids.json'},
         {'url': "https://economictimes.indiatimes.com/markets/stocks/news", 'selector': 'div.eachStory', 'output_file': "economictimes_stocks_rss_feed.json", 'sent_ids_file': 'economictimes_stocks_sent_ids.json'},
         # Business Standard RSS
-        bs_sources = [
+        
         {'url': "https://www.business-standard.com/rss/industry/news-21705.rss", 'rss': True, 'output_file': "bs_industry_news_rss_feed.json", 'sent_ids_file': "bs_industry_news_sent_ids.json"},
         {'url': "https://www.business-standard.com/rss/industry/banking-21703.rss", 'rss': True, 'output_file': "bs_banking_rss_feed.json", 'sent_ids_file': "bs_banking_sent_ids.json"},
         {'url': "https://www.business-standard.com/rss/markets-106.rss", 'rss': True, 'output_file': "bs_markets_rss_feed.json", 'sent_ids_file': "bs_markets_sent_ids.json"},
