@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 from logging.handlers import RotatingFileHandler
 from dateutil import parser
 from tenacity import retry, stop_after_attempt, wait_exponential
+import feedparser
 
 # Load environment variables from .env file
 load_dotenv()
@@ -36,17 +37,15 @@ def parse_date(date_str):
     """Parse a date string into a datetime object."""
     try:
         date_str = date_str.replace('Updated On :', '').strip()
-        # Try specific formats first
         for fmt in [
-            '%d %b %Y %H:%M:%S',  # e.g., "25 Oct 2023 14:30:00"
-            '%Y-%m-%dT%H:%M:%S',  # ISO format from <time> tags
-            '%d/%m/%Y %H:%M',     # e.g., "25/10/2023 14:30"
+            '%d %b %Y %H:%M:%S',
+            '%Y-%m-%dT%H:%M:%S',
+            '%d/%m/%Y %H:%M',
         ]:
             try:
                 return datetime.datetime.strptime(date_str, fmt)
             except ValueError:
                 continue
-        # Fallback to fuzzy parsing
         parsed_date = parser.parse(date_str, fuzzy=True)
         return parsed_date
     except ValueError as e:
@@ -82,17 +81,28 @@ def scrape_news(url, selector):
         'Accept-Language': 'en-US,en;q=0.9',
         'Accept-Encoding': 'gzip, deflate, br',
         'Referer': 'https://www.google.com/',
-        'Connection': 'keep-alive'
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1'
     }
 
     try:
         response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status()
-        encoding = response.encoding if response.encoding != 'ISO-8859-1' else 'utf-8'
+        encoding = response.encoding if response.encoding and response.encoding != 'ISO-8859-1' else 'utf-8'
         soup = BeautifulSoup(response.content, 'html.parser', from_encoding=encoding)
         logging.info(f"Response content length for {url}: {len(response.content)} bytes")
         articles = soup.select(selector)
-        logging.info(f"Found {len(articles)} articles for {url}")
+        logging.info(f"Found {len(articles)} articles for {url} with selector '{selector}'")
+
+        if len(articles) == 0:
+            # Try alternative selectors
+            alternative_selectors = ['div.story', 'div.article', 'div.newsItem', 'li.article', 'div.storyItem']
+            for alt_selector in alternative_selectors:
+                alt_articles = soup.select(alt_selector)
+                if alt_articles:
+                    logging.info(f"Alternative selector '{alt_selector}' found {len(alt_articles)} articles")
+                    break
+            logging.debug(f"HTML snippet: {str(soup)[:500]}...")
 
         items = []
         for article in articles:
@@ -125,6 +135,24 @@ def scrape_news(url, selector):
             logging.error(f"Response headers: {e.response.headers}")
         return []
 
+def scrape_rss(url, output_file):
+    """Scrape articles from an RSS feed."""
+    try:
+        feed = feedparser.parse(url)
+        items = []
+        for entry in feed.entries:
+            items.append({
+                'title': entry.get('title', 'No title'),
+                'link': entry.get('link', '#'),
+                'description': entry.get('description', '').encode('utf-8', errors='replace').decode('utf-8'),
+                'pubDate': entry.get('published', datetime.datetime.now().isoformat())
+            })
+        logging.info(f"Scraped {len(items)} articles from RSS feed {url}")
+        return items
+    except Exception as e:
+        logging.error(f"Error parsing RSS feed {url}: {e}")
+        return []
+
 def create_or_update_json_feed(items, output_file):
     """Create or update a JSON feed with current date items."""
     output_path = os.path.join(script_directory, output_file)
@@ -142,7 +170,6 @@ def create_or_update_json_feed(items, output_file):
     else:
         existing_items = []
 
-    # Add new items from today (commented out for testing)
     # new_items = [item for item in items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
     new_items = items  # Temporarily process all items for debugging
     updated_items = existing_items + new_items
@@ -166,7 +193,6 @@ def create_or_update_json_feed(items, output_file):
 def send_to_telegram(bot_token, chat_id, message):
     """Send a message to Telegram."""
     telegram_api_url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
-    # Append @Stock_Market_News_Buzz on a new line
     message = f"{message}\n@Stock_Market_News_Buzz"
     payload = {
         'chat_id': chat_id,
@@ -176,7 +202,7 @@ def send_to_telegram(bot_token, chat_id, message):
     try:
         response = requests.post(telegram_api_url, data=payload, timeout=10)
         response.raise_for_status()
-        time.sleep(2)  # Delay to avoid Telegram rate limits
+        time.sleep(2)
     except requests.exceptions.HTTPError as http_err:
         if response.status_code == 429:
             retry_after = int(response.headers.get('Retry-After', 60))
@@ -209,12 +235,15 @@ def process_source(source, bot_token, chat_id):
     logging.info(f"Processing source: {source['url']}")
     sent_ids_file_path = os.path.join(script_directory, source['sent_ids_file'])
     sent_ids = read_sent_ids(sent_ids_file_path)
-    items = scrape_news(source['url'], source['selector'])
+
+    if source.get('is_rss'):
+        items = scrape_rss(source['url'], source['output_file'])
+    else:
+        items = scrape_news(source['url'], source['selector'])
     logging.info(f"Scraped {len(items)} articles from {source['url']}")
 
     if items:
         today = datetime.datetime.now().date()
-        # new_items = [item for item in items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
         new_items = items  # Temporarily process all items for debugging
         logging.info(f"Found {len(new_items)} articles from today")
 
@@ -254,49 +283,49 @@ def main():
     sources = [
         {
             'url': "https://www.moneycontrol.com/news/business/stocks/",
-            'selector': 'li.clearfix',
+            'selector': 'li.clearfix',  # Update after manual verification
             'output_file': "moneycontrol_rss_feed.json",
             'sent_ids_file': 'moneycontrol_sent_ids.json'
         },
         {
             'url': "https://www.moneycontrol.com/news/business/companies/",
-            'selector': 'li.clearfix',
+            'selector': 'li.clearfix',  # Update after manual verification
             'output_file': "moneycontrol_companies_rss_feed.json",
             'sent_ids_file': 'moneycontrol_companies_sent_ids.json'
         },
         {
             'url': "https://economictimes.indiatimes.com/markets/stocks/earnings/news",
-            'selector': 'div.eachStory',
+            'selector': 'div.eachStory',  # Update after manual verification
             'output_file': "economictimes_earnings_rss_feed.json",
             'sent_ids_file': 'economictimes_earnings_sent_ids.json'
         },
         {
             'url': "https://economictimes.indiatimes.com/markets/stocks/news",
-            'selector': 'div.eachStory',
+            'selector': 'div.eachStory',  # Update after manual verification
             'output_file': "economictimes_stocks_rss_feed.json",
             'sent_ids_file': 'economictimes_stocks_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/markets/news",
-            'selector': 'div.listingstyle_cardlistlist__dfq57.cardlist',
+            'url': "https://www.business-standard.com/rss/markets-106.xml",
+            'is_rss': True,
             'output_file': "businessstandard_markets_news_rss_feed.json",
             'sent_ids_file': 'businessstandard_markets_news_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/markets/capital-market-news",
-            'selector': 'div.cardlist',
+            'url': "https://www.business-standard.com/rss/markets-106.xml",  # Same feed for capital markets
+            'is_rss': True,
             'output_file': "businessstandard_capital_market_news_rss_feed.json",
             'sent_ids_file': 'businessstandard_capital_market_news_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/topic/ipos",
-            'selector': 'div.cardlist',
+            'url': "https://www.business-standard.com/rss/ipo-132.xml",
+            'is_rss': True,
             'output_file': "businessstandard_ipos_rss_feed.json",
             'sent_ids_file': 'businessstandard_ipos_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/markets/mutual-fund",
-            'selector': 'div.cardlist',
+            'url': "https://www.business-standard.com/rss/mutual-fund-115.xml",
+            'is_rss': True,
             'output_file': "businessstandard_mutual_fund_rss_feed.json",
             'sent_ids_file': 'businessstandard_mutual_fund_sent_ids.json'
         }
@@ -304,9 +333,12 @@ def main():
 
     logging.info("Starting news scraping process...")
     random.shuffle(sources)
+    total_articles = 0
     for source in sources:
         process_source(source, bot_token, chat_id)
-    logging.info("Scraping process completed.")
+        total_articles += len(scrape_news(source['url'], source.get('selector', '')) if not source.get('is_rss') else scrape_rss(source['url'], source['output_file']))
+    logging.info(f"Scraping process completed. Total articles scraped: {total_articles}")
+    send_to_telegram(bot_token, chat_id, f"Scraping completed. Total articles scraped: {total_articles}\n@Stock_Market_News_Buzz")
 
 if __name__ == "__main__":
     main()
