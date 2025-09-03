@@ -94,6 +94,7 @@ def scrape_news(url, selector):
 
 # ---------- Scrape Business Standard via RSS ----------
 
+# For RSS sources (Business Standard)
 def scrape_bs_rss(rss_url):
     feed = feedparser.parse(rss_url)
     items = []
@@ -102,15 +103,25 @@ def scrape_bs_rss(rss_url):
         try:
             pub_date_parsed = parser.parse(pub_date)
             pub_date_iso = pub_date_parsed.isoformat()
-        except Exception:
+        except:
             pub_date_iso = datetime.datetime.now().isoformat()
+
+        # RSS might contain 'media_content' or 'media_thumbnail'
+        image_url = ''
+        if 'media_content' in entry:
+            image_url = entry.media_content[0].get('url', '')
+        elif 'media_thumbnail' in entry:
+            image_url = entry.media_thumbnail[0].get('url', '')
+
         items.append({
             "title": entry.title,
             "link": entry.link,
             "description": entry.get("summary", ""),
-            "pubDate": pub_date_iso
+            "pubDate": pub_date_iso,
+            "image": image_url
         })
     return items
+
 
 # ---------- JSON Feed & Telegram ----------
 
@@ -151,7 +162,20 @@ def create_or_update_json_feed(items, output_file):
     except Exception as e:
         logging.error(f"Failed to write JSON feed: {e}")
 
-def send_to_telegram(bot_token, chat_id, message):
+def send_to_telegram(bot_token, chat_id, message, image_url=None):
+    if image_url:
+        try:
+            response = requests.post(
+                f'https://api.telegram.org/bot{bot_token}/sendPhoto',
+                data={'chat_id': chat_id, 'caption': message, 'parse_mode': 'Markdown'},
+                files={'photo': requests.get(image_url, stream=True).raw}
+            )
+            response.raise_for_status()
+            return
+        except Exception as e:
+            logging.warning(f"Failed to send image, sending text only: {e}")
+
+    # fallback to text only
     try:
         response = requests.post(
             f'https://api.telegram.org/bot{bot_token}/sendMessage',
@@ -160,6 +184,7 @@ def send_to_telegram(bot_token, chat_id, message):
         response.raise_for_status()
     except Exception as e:
         logging.error(f"Failed to send Telegram message: {e}")
+
 
 def read_sent_ids(file_path):
     if os.path.exists(file_path):
@@ -193,9 +218,12 @@ def process_source(source, bot_token, chat_id):
             if not any(k.lower() in (item['title'] + " " + item['description']).lower() for k in exclude_keywords)
         ]
         to_send = [item for item in filtered_items if item['link'] not in sent_ids]
+        # Add this inside process_source loop when preparing message
         for item in to_send:
-            message = f"*{item['title']}*\n\n{item['description']}"
-            send_to_telegram(bot_token, chat_id, message)
+            message = f"*{item['title']}*\n\n{item['description']}\n\n@Stock_Market_News_Buzz"
+            # Send with optional image
+            send_to_telegram(bot_token, chat_id, message, item.get('image'))
+
         create_or_update_json_feed(to_send, source['output_file'])
         new_ids = set(item['link'] for item in to_send)
         write_sent_ids(sent_ids_file_path, sent_ids.union(new_ids))
