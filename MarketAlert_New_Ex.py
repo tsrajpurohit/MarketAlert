@@ -207,26 +207,33 @@ def process_source(source, bot_token, chat_id):
     # Decide scraper
     if source.get('rss', False):
         items = scrape_bs_rss(source['url'])
+        logging.info(f"[RSS] Found {len(items)} articles at {source['url']}")
     else:
         items = scrape_news(source['url'], source['selector'])
+        logging.info(f"[HTML] Found {len(items)} articles at {source['url']}")
     
     if items:
         today = datetime.datetime.now().date()
         new_items = [item for item in items if parser.parse(item['pubDate']).date() == today]
+        logging.info(f"{len(new_items)} new items found today at {source['url']}")
+        
         filtered_items = [
             item for item in new_items
             if not any(k.lower() in (item['title'] + " " + item['description']).lower() for k in exclude_keywords)
         ]
+        logging.info(f"{len(filtered_items)} items remaining after applying exclude_keywords filter")
+        
         to_send = [item for item in filtered_items if item['link'] not in sent_ids]
-        # Add this inside process_source loop when preparing message
+        logging.info(f"{len(to_send)} items to send (not sent before)")
+
         for item in to_send:
             message = f"*{item['title']}*\n\n{item['description']}\n\n@Stock_Market_News_Buzz"
-            # Send with optional image
             send_to_telegram(bot_token, chat_id, message, item.get('image'))
 
         create_or_update_json_feed(to_send, source['output_file'])
         new_ids = set(item['link'] for item in to_send)
         write_sent_ids(sent_ids_file_path, sent_ids.union(new_ids))
+
 
 # ---------- Main ----------
 
