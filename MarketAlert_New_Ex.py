@@ -100,28 +100,36 @@ def scrape_bs_rss(rss_url):
     items = []
     for entry in feed.entries:
         # Parse pubDate
-        pub_date = entry.get("published", datetime.datetime.now().isoformat())
+        pub_date = entry.get("published", entry.get("updated", datetime.datetime.now().isoformat()))
         try:
             pub_date_parsed = parser.parse(pub_date)
             pub_date_iso = pub_date_parsed.isoformat()
-        except:
+        except Exception:
             pub_date_iso = datetime.datetime.now().isoformat()
 
-        # Extract image if exists
-        image_url = ''
-        if 'media_content' in entry:
-            image_url = entry.media_content[0].get('url', '')
-        elif 'media_thumbnail' in entry:
-            image_url = entry.media_thumbnail[0].get('url', '')
+        # Extract image (media:content, media:thumbnail, enclosure, etc.)
+        image_url = ""
+        if "media_content" in entry and len(entry.media_content) > 0:
+            image_url = entry.media_content[0].get("url", "")
+        elif "media_thumbnail" in entry and len(entry.media_thumbnail) > 0:
+            image_url = entry.media_thumbnail[0].get("url", "")
+        elif "links" in entry:
+            # Sometimes images are in enclosure links
+            for link in entry.links:
+                if link.get("rel") == "enclosure" and "image" in link.get("type", ""):
+                    image_url = link.get("href", "")
+                    break
 
         items.append({
-            "title": entry.title,
-            "link": entry.link,
+            "title": entry.get("title", "No Title"),
+            "link": entry.get("link", "#"),
             "description": entry.get("summary", ""),
             "pubDate": pub_date_iso,
             "image": image_url
         })
+
     return items
+
 
 
 # ---------- JSON Feed & Telegram ----------
