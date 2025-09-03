@@ -259,26 +259,40 @@ def main():
 
     sources = [
         # Moneycontrol
-        {'url': "https://www.moneycontrol.com/news/business/stocks/", 'selector': 'li.clearfix', 'output_file': "moneycontrol_rss_feed.json", 'sent_ids_file': 'moneycontrol_sent_ids.json'},
-        {'url': "https://www.moneycontrol.com/news/business/companies/", 'selector': 'li.clearfix', 'output_file': "moneycontrol_companies_rss_feed.json", 'sent_ids_file': 'moneycontrol__companies_sent_ids.json'},
+        {'url': "https://www.moneycontrol.com/news/business/stocks/", 'selector': 'li.clearfix',
+         'output_file': "moneycontrol_rss_feed.json", 'sent_ids_file': 'moneycontrol_sent_ids.json'},
+        {'url': "https://www.moneycontrol.com/news/business/companies/", 'selector': 'li.clearfix',
+         'output_file': "moneycontrol_companies_rss_feed.json", 'sent_ids_file': 'moneycontrol__companies_sent_ids.json'},
         # ET
-        {'url': "https://economictimes.indiatimes.com/markets/stocks/earnings/news", 'selector': 'div.eachStory', 'output_file': "economictimes_earnings_rss_feed.json", 'sent_ids_file': 'economictimes_earnings_sent_ids.json'},
-        {'url': "https://economictimes.indiatimes.com/markets/stocks/news", 'selector': 'div.eachStory', 'output_file': "economictimes_stocks_rss_feed.json", 'sent_ids_file': 'economictimes_stocks_sent_ids.json'},
-        # Business Standard RSS
-        
-        {'url': "https://www.business-standard.com/rss/industry/news-21705.rss", 'rss': True, 'output_file': "bs_industry_news_rss_feed.json", 'sent_ids_file': "bs_industry_news_sent_ids.json"},
-        {'url': "https://www.business-standard.com/rss/industry/banking-21703.rss", 'rss': True, 'output_file': "bs_banking_rss_feed.json", 'sent_ids_file': "bs_banking_sent_ids.json"},
-        {'url': "https://www.business-standard.com/rss/markets-106.rss", 'rss': True, 'output_file': "bs_markets_rss_feed.json", 'sent_ids_file': "bs_markets_sent_ids.json"},
-        {'url': "https://www.business-standard.com/rss/industry-217.rss", 'rss': True, 'output_file': "bs_industry_rss_feed.json", 'sent_ids_file': "bs_industry_sent_ids.json"},
-        {'url': "https://www.business-standard.com/rss/home_page_top_stories.rss", 'rss': True, 'output_file': "bs_top_stories_rss_feed.json", 'sent_ids_file': "bs_top_stories_sent_ids.json"},
-    
+        {'url': "https://economictimes.indiatimes.com/markets/stocks/earnings/news", 'selector': 'div.eachStory',
+         'output_file': "economictimes_earnings_rss_feed.json", 'sent_ids_file': 'economictimes_earnings_sent_ids.json'},
+        {'url': "https://economictimes.indiatimes.com/markets/stocks/news", 'selector': 'div.eachStory',
+         'output_file': "economictimes_stocks_rss_feed.json", 'sent_ids_file': 'economictimes_stocks_sent_ids.json'},
     ]
+
+    # Add Business Standard RSS sources
+    bs_sources = [
+        {'url': "https://www.business-standard.com/rss/industry/news-21705.rss", 'rss': True,
+         'output_file': "bs_industry_news_rss_feed.json", 'sent_ids_file': "bs_industry_news_sent_ids.json"},
+        {'url': "https://www.business-standard.com/rss/industry/banking-21703.rss", 'rss': True,
+         'output_file': "bs_banking_rss_feed.json", 'sent_ids_file': "bs_banking_sent_ids.json"},
+        {'url': "https://www.business-standard.com/rss/markets-106.rss", 'rss': True,
+         'output_file': "bs_markets_rss_feed.json", 'sent_ids_file': "bs_markets_sent_ids.json"},
+        {'url': "https://www.business-standard.com/rss/industry-217.rss", 'rss': True,
+         'output_file': "bs_industry_rss_feed.json", 'sent_ids_file': "bs_industry_sent_ids.json"},
+        {'url': "https://www.business-standard.com/rss/home_page_top_stories.rss", 'rss': True,
+         'output_file': "bs_top_stories_rss_feed.json", 'sent_ids_file': "bs_top_stories_sent_ids.json"},
+    ]
+
+    # Merge all sources
+    sources.extend(bs_sources)
 
     logging.info("Starting news scraping process...")
     random.shuffle(sources)
     for source in sources:
         process_source(source, bot_token, chat_id)
     logging.info("Scraping process completed.")
+
 
 if __name__ == "__main__":
     main()
