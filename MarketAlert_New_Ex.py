@@ -96,7 +96,7 @@ def scrape_news(url, selector):
         logging.info(f"Found {len(articles)} articles for {url} with selector '{selector}'")
 
         if len(articles) == 0:
-            alternative_selectors = ['div.story', 'div.article', 'div.newsItem', 'li.article', 'div.storyItem']
+            alternative_selectors = ['div.story', 'div.article', 'div.newsItem', 'li.article', 'div.storyItem', 'div.each-story']
             for alt_selector in alternative_selectors:
                 alt_articles = soup.select(alt_selector)
                 if alt_articles:
@@ -287,48 +287,48 @@ def main():
     sources = [
         {
             'url': "https://www.moneycontrol.com/news/business/stocks/",
-            'selector': 'li.article',  # Tentative; update after test
+            'selector': 'li.clearfix',
             'output_file': "moneycontrol_rss_feed.json",
             'sent_ids_file': 'moneycontrol_sent_ids.json'
         },
         {
             'url': "https://www.moneycontrol.com/news/business/companies/",
-            'selector': 'li.article',  # Tentative; update after test
+            'selector': 'li.clearfix',
             'output_file': "moneycontrol_companies_rss_feed.json",
             'sent_ids_file': 'moneycontrol_companies_sent_ids.json'
         },
         {
-            'url': "https://economictimes.indiatimes.com/markets/stocks/earnings/news",
-            'selector': 'div.storyItem',  # Tentative; update after test
+            'url': "https://economictimes.indiatimes.com/rssfeeds/1373380680.cms",
+            'is_rss': True,
             'output_file': "economictimes_earnings_rss_feed.json",
             'sent_ids_file': 'economictimes_earnings_sent_ids.json'
         },
         {
-            'url': "https://economictimes.indiatimes.com/markets/stocks/news",
-            'selector': 'div.storyItem',  # Tentative; update after test
+            'url': "https://economictimes.indiatimes.com/rssfeeds/1373380680.cms",
+            'is_rss': True,
             'output_file': "economictimes_stocks_rss_feed.json",
             'sent_ids_file': 'economictimes_stocks_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/rss/markets-106.xml",
+            'url': "https://www.business-standard.com/rss/markets.xml",
             'is_rss': True,
             'output_file': "businessstandard_markets_news_rss_feed.json",
             'sent_ids_file': 'businessstandard_markets_news_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/rss/markets-106.xml",
+            'url': "https://www.business-standard.com/rss/markets.xml",
             'is_rss': True,
             'output_file': "businessstandard_capital_market_news_rss_feed.json",
             'sent_ids_file': 'businessstandard_capital_market_news_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/rss/ipo-132.xml",
+            'url': "https://www.business-standard.com/rss/ipo.xml",
             'is_rss': True,
             'output_file': "businessstandard_ipos_rss_feed.json",
             'sent_ids_file': 'businessstandard_ipos_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/rss/mutual-fund-115.xml",
+            'url': "https://www.business-standard.com/rss/mutual-fund.xml",
             'is_rss': True,
             'output_file': "businessstandard_mutual_fund_rss_feed.json",
             'sent_ids_file': 'businessstandard_mutual_fund_sent_ids.json'
