@@ -249,16 +249,16 @@ def process_source(source, bot_token, chat_id):
     if items:
         today = datetime.datetime.now().date()
         new_items = items  # Temporarily process all items for debugging
-        logging.info(f"Found {len(new_items)} articles from today")
 
-        filtered_items = []
-        for item in new_items:
-            title_lower = item['title'].lower()
-            desc_lower = item['description'].lower()
-            if any(keyword.lower() in title_lower or keyword.lower() in desc_lower for keyword in exclude_keywords):
-                logging.info(f"Filtered out: {item['title']} (Reason: Contains excluded keyword)")
-                continue
-            filtered_items.append(item)
+        filtered_items = new_items  # Temporarily disable filtering for debugging
+        # filtered_items = []
+        # for item in new_items:
+        #     title_lower = item['title'].lower()
+        #     desc_lower = item['description'].lower()
+        #     if any(keyword.lower() in title_lower or keyword.lower() in desc_lower for keyword in exclude_keywords):
+        #         logging.info(f"Filtered out: {item['title']} (Reason: Contains excluded keyword)")
+        #         continue
+        #     filtered_items.append(item)
         logging.info(f"After filtering, {len(filtered_items)} articles remain")
 
         new_items_to_send = [item for item in filtered_items if item['link'] not in sent_ids]
