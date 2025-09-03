@@ -216,49 +216,49 @@ def main():
     sources = [
         {
             'url': "https://www.moneycontrol.com/news/business/stocks/",
-            'selector': 'li.clearfix',  # Confirmed by test, but failing in script
+            'selector': 'li.clearfix',
             'output_file': "moneycontrol_rss_feed.json",
             'sent_ids_file': 'moneycontrol_sent_ids.json'
         },
-        {
+         {
             'url': "https://www.moneycontrol.com/news/business/companies/",
-            'selector': 'li.clearfix',  # Confirmed by test, but failing in script
+            'selector': 'li.clearfix',
             'output_file': "moneycontrol_companies_rss_feed.json",
-            'sent_ids_file': 'moneycontrol_companies_sent_ids.json'
+            'sent_ids_file': 'moneycontrol__companies_sent_ids.json'
         },
         {
-            'url': "https://economictimes.indiatimes.com/rssfeeds/1373380680.cms",
-            'is_rss': True,
+            'url': "https://economictimes.indiatimes.com/markets/stocks/earnings/news",
+            'selector': 'div.eachStory',
             'output_file': "economictimes_earnings_rss_feed.json",
             'sent_ids_file': 'economictimes_earnings_sent_ids.json'
         },
         {
-            'url': "https://economictimes.indiatimes.com/rssfeeds/1373380680.cms",
-            'is_rss': True,
+            'url': "https://economictimes.indiatimes.com/markets/stocks/news",
+            'selector': 'div.eachStory',
             'output_file': "economictimes_stocks_rss_feed.json",
             'sent_ids_file': 'economictimes_stocks_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/rss/markets-106.xml",  # Revert to original; verify
-            'is_rss': True,
+            'url': "https://www.business-standard.com/markets/news",
+            'selector': 'div.listingstyle_cardlistlist__dfq57.cardlist',
             'output_file': "businessstandard_markets_news_rss_feed.json",
             'sent_ids_file': 'businessstandard_markets_news_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/rss/markets-106.xml",  # Revert; with keyword filtering
-            'is_rss': True,
+            'url': "https://www.business-standard.com/markets/capital-market-news",
+            'selector': 'div.cardlist',
             'output_file': "businessstandard_capital_market_news_rss_feed.json",
             'sent_ids_file': 'businessstandard_capital_market_news_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/rss/ipo-132.xml",  # Revert to original; verify
-            'is_rss': True,
+            'url': "https://www.business-standard.com/topic/ipos",
+            'selector': 'div.cardlist',
             'output_file': "businessstandard_ipos_rss_feed.json",
             'sent_ids_file': 'businessstandard_ipos_sent_ids.json'
         },
         {
-            'url': "https://www.business-standard.com/rss/mutual-fund-115.xml",  # Revert; verify
-            'is_rss': True,
+            'url': "https://www.business-standard.com/markets/mutual-fund",
+            'selector': 'div.cardlist',
             'output_file': "businessstandard_mutual_fund_rss_feed.json",
             'sent_ids_file': 'businessstandard_mutual_fund_sent_ids.json'
         }
