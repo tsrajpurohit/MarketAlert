@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from logging.handlers import RotatingFileHandler
 from dateutil import parser
 import cloudscraper
-
+from dateutil import parser  # you already imported it
 # Load environment variables from .env file
 load_dotenv()
 
@@ -135,7 +135,10 @@ def create_or_update_json_feed(items, output_file):
                 existing_data = json.load(file)
                 existing_items = existing_data.get('items', [])
                 # Keep only items from today
-                existing_items = [item for item in existing_items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
+               existing_items = [
+                    item for item in existing_items
+                    if parser.parse(item['pubDate']).date() == today
+                ]
             except json.JSONDecodeError:
                 logging.warning(f"Failed to decode JSON from {output_path}. Creating a new feed.")
                 existing_items = []
@@ -143,7 +146,8 @@ def create_or_update_json_feed(items, output_file):
         existing_items = []
 
     # Add new items from today
-    new_items = [item for item in items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
+    new_items = [item for item in items if parser.parse(item['pubDate']).date() == today]
+
     updated_items = existing_items + new_items
 
     feed_data = {
