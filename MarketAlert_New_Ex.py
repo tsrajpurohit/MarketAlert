@@ -99,6 +99,7 @@ def scrape_bs_rss(rss_url):
     feed = feedparser.parse(rss_url)
     items = []
     for entry in feed.entries:
+        # Parse pubDate
         pub_date = entry.get("published", datetime.datetime.now().isoformat())
         try:
             pub_date_parsed = parser.parse(pub_date)
@@ -106,7 +107,7 @@ def scrape_bs_rss(rss_url):
         except:
             pub_date_iso = datetime.datetime.now().isoformat()
 
-        # RSS might contain 'media_content' or 'media_thumbnail'
+        # Extract image if exists
         image_url = ''
         if 'media_content' in entry:
             image_url = entry.media_content[0].get('url', '')
@@ -200,39 +201,51 @@ def write_sent_ids(file_path, ids):
         json.dump(list(ids), f)
 
 def process_source(source, bot_token, chat_id):
-    exclude_keywords = ["KR Choksey", "Lilladher","motilal","ICICI Securities","Sharekhan","straight session","Anand Rathi","Emkay"]
+    exclude_keywords = ["KR Choksey", "Lilladher", "motilal", "ICICI Securities",
+                        "Sharekhan", "straight session", "Anand Rathi", "Emkay"]
     sent_ids_file_path = os.path.join(script_directory, source['sent_ids_file'])
     sent_ids = read_sent_ids(sent_ids_file_path)
     
-    # Decide scraper
-    if source.get('rss', False):
-        items = scrape_bs_rss(source['url'])
-        logging.info(f"[RSS] Found {len(items)} articles at {source['url']}")
-    else:
-        items = scrape_news(source['url'], source['selector'])
-        logging.info(f"[HTML] Found {len(items)} articles at {source['url']}")
+    # Scrape source
+    try:
+        if source.get('rss', False):
+            items = scrape_bs_rss(source['url'])
+            logging.info(f"[RSS] Found {len(items)} articles at {source['url']}")
+        else:
+            items = scrape_news(source['url'], source['selector'])
+            logging.info(f"[HTML] Found {len(items)} articles at {source['url']}")
+    except Exception as e:
+        logging.error(f"Failed to scrape {source['url']}: {e}")
+        return
     
-    if items:
-        today = datetime.datetime.now().date()
-        new_items = [item for item in items if parser.parse(item['pubDate']).date() == today]
-        logging.info(f"{len(new_items)} new items found today at {source['url']}")
-        
-        filtered_items = [
-            item for item in new_items
-            if not any(k.lower() in (item['title'] + " " + item['description']).lower() for k in exclude_keywords)
-        ]
-        logging.info(f"{len(filtered_items)} items remaining after applying exclude_keywords filter")
-        
-        to_send = [item for item in filtered_items if item['link'] not in sent_ids]
-        logging.info(f"{len(to_send)} items to send (not sent before)")
-
-        for item in to_send:
-            message = f"*{item['title']}*\n\n{item['description']}\n\n@Stock_Market_News_Buzz"
-            send_to_telegram(bot_token, chat_id, message, item.get('image'))
-
+    # Filter today's items
+    today = datetime.datetime.now().date()
+    new_items = [item for item in items if parser.parse(item['pubDate']).date() == today]
+    logging.info(f"{len(new_items)} new items found today at {source['url']}")
+    
+    # Apply keyword filter
+    filtered_items = [
+        item for item in new_items
+        if not any(k.lower() in (item['title'] + " " + item['description']).lower() for k in exclude_keywords)
+    ]
+    logging.info(f"{len(filtered_items)} items remaining after applying exclude_keywords filter")
+    
+    # Exclude already sent items
+    to_send = [item for item in filtered_items if item['link'] not in sent_ids]
+    logging.info(f"{len(to_send)} items to send (not sent before)")
+    
+    # Send messages to Telegram
+    for item in to_send:
+        message = f"*{item['title']}*\n\n{item['description']}\n\n@Stock_Market_News_Buzz"
+        send_to_telegram(bot_token, chat_id, message, item.get('image'))
+    
+    # Update JSON feed and sent IDs
+    if to_send:
         create_or_update_json_feed(to_send, source['output_file'])
         new_ids = set(item['link'] for item in to_send)
         write_sent_ids(sent_ids_file_path, sent_ids.union(new_ids))
+        logging.info(f"JSON feed updated and sent IDs recorded for {source['url']}")
+
 
 
 # ---------- Main ----------
@@ -252,10 +265,13 @@ def main():
         {'url': "https://economictimes.indiatimes.com/markets/stocks/earnings/news", 'selector': 'div.eachStory', 'output_file': "economictimes_earnings_rss_feed.json", 'sent_ids_file': 'economictimes_earnings_sent_ids.json'},
         {'url': "https://economictimes.indiatimes.com/markets/stocks/news", 'selector': 'div.eachStory', 'output_file': "economictimes_stocks_rss_feed.json", 'sent_ids_file': 'economictimes_stocks_sent_ids.json'},
         # Business Standard RSS
-        {'url': "https://www.business-standard.com/rss/markets-news.rss", 'rss': True, 'output_file': "businessstandard_markets_news_rss_feed.json", 'sent_ids_file': 'businessstandard_markets_news_sent_ids.json'},
-        {'url': "https://www.business-standard.com/rss/capital-market-news.rss", 'rss': True, 'output_file': "businessstandard_capital_market_news_rss_feed.json", 'sent_ids_file': 'businessstandard_capital_market_news_sent_ids.json'},
-        {'url': "https://www.business-standard.com/rss/ipos.rss", 'rss': True, 'output_file': "businessstandard_ipos_rss_feed.json", 'sent_ids_file': 'businessstandard_ipos_sent_ids.json'},
-        {'url': "https://www.business-standard.com/rss/mutual-funds.rss", 'rss': True, 'output_file': "businessstandard_mutual_fund_rss_feed.json", 'sent_ids_file': 'businessstandard_mutual_fund_sent_ids.json'},
+        bs_sources = [
+        {'url': "https://www.business-standard.com/rss/industry/news-21705.rss", 'rss': True, 'output_file': "bs_industry_news_rss_feed.json", 'sent_ids_file': "bs_industry_news_sent_ids.json"},
+        {'url': "https://www.business-standard.com/rss/industry/banking-21703.rss", 'rss': True, 'output_file': "bs_banking_rss_feed.json", 'sent_ids_file': "bs_banking_sent_ids.json"},
+        {'url': "https://www.business-standard.com/rss/markets-106.rss", 'rss': True, 'output_file': "bs_markets_rss_feed.json", 'sent_ids_file': "bs_markets_sent_ids.json"},
+        {'url': "https://www.business-standard.com/rss/industry-217.rss", 'rss': True, 'output_file': "bs_industry_rss_feed.json", 'sent_ids_file': "bs_industry_sent_ids.json"},
+        {'url': "https://www.business-standard.com/rss/home_page_top_stories.rss", 'rss': True, 'output_file': "bs_top_stories_rss_feed.json", 'sent_ids_file': "bs_top_stories_sent_ids.json"},
+    
     ]
 
     logging.info("Starting news scraping process...")
