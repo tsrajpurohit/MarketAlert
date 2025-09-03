@@ -11,6 +11,8 @@ from logging.handlers import RotatingFileHandler
 from dateutil import parser
 import feedparser
 
+
+
 # Load environment variables
 load_dotenv()
 
@@ -96,10 +98,19 @@ def scrape_news(url, selector):
 
 # For RSS sources (Business Standard)
 def scrape_bs_rss(rss_url):
-    feed = feedparser.parse(rss_url)
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+    try:
+        resp = requests.get(rss_url, headers=headers, timeout=10)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"⚠️ Error fetching RSS {rss_url}: {e}")
+        return []
+
+    feed = feedparser.parse(resp.text)
     items = []
+
     for entry in feed.entries:
-        # Parse pubDate
+        # Date parsing
         pub_date = entry.get("published", entry.get("updated", datetime.datetime.now().isoformat()))
         try:
             pub_date_parsed = parser.parse(pub_date)
@@ -107,14 +118,13 @@ def scrape_bs_rss(rss_url):
         except Exception:
             pub_date_iso = datetime.datetime.now().isoformat()
 
-        # Extract image (media:content, media:thumbnail, enclosure, etc.)
+        # Extract image
         image_url = ""
         if "media_content" in entry and len(entry.media_content) > 0:
             image_url = entry.media_content[0].get("url", "")
         elif "media_thumbnail" in entry and len(entry.media_thumbnail) > 0:
             image_url = entry.media_thumbnail[0].get("url", "")
         elif "links" in entry:
-            # Sometimes images are in enclosure links
             for link in entry.links:
                 if link.get("rel") == "enclosure" and "image" in link.get("type", ""):
                     image_url = link.get("href", "")
