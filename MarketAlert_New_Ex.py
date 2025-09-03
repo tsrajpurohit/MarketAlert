@@ -134,11 +134,16 @@ def create_or_update_json_feed(items, output_file):
             try:
                 existing_data = json.load(file)
                 existing_items = existing_data.get('items', [])
-                # Keep only items from today
-               existing_items = [
-                    item for item in existing_items
-                    if parser.parse(item['pubDate']).date() == today
-                ]
+                # Keep only items from today, safely parsing pubDate
+                filtered_items = []
+                for item in existing_items:
+                    try:
+                        item_date = parser.parse(item['pubDate']).date()
+                        if item_date == today:
+                            filtered_items.append(item)
+                    except (ValueError, TypeError) as e:
+                        logging.warning(f"Skipping item with invalid pubDate '{item.get('pubDate')}': {e}")
+                existing_items = filtered_items
             except json.JSONDecodeError:
                 logging.warning(f"Failed to decode JSON from {output_path}. Creating a new feed.")
                 existing_items = []
@@ -146,7 +151,14 @@ def create_or_update_json_feed(items, output_file):
         existing_items = []
 
     # Add new items from today
-    new_items = [item for item in items if parser.parse(item['pubDate']).date() == today]
+    new_items = []
+    for item in items:
+        try:
+            item_date = parser.parse(item['pubDate']).date()
+            if item_date == today:
+                new_items.append(item)
+        except (ValueError, TypeError) as e:
+            logging.warning(f"Skipping new item with invalid pubDate '{item.get('pubDate')}': {e}")
 
     updated_items = existing_items + new_items
 
@@ -165,6 +177,7 @@ def create_or_update_json_feed(items, output_file):
             logging.info(f"JSON feed successfully written to {output_path}.")
     except Exception as e:
         logging.error(f"Failed to write JSON feed to {output_path}: {e}")
+
 
 def send_to_telegram(bot_token, chat_id, message):
     telegram_api_url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
