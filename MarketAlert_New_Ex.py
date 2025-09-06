@@ -24,15 +24,14 @@ logging.getLogger().addHandler(file_handler)
 script_directory = os.path.dirname(os.path.abspath(__file__))
 
 def parse_date(date_str):
-    """Parse a date string into a datetime object."""
+    """Parse a date string into a datetime object and return ISO 8601 string."""
     try:
         date_str = date_str.replace('Updated On :', '').strip()
         parsed_date = parser.parse(date_str, fuzzy=True)
-        logging.info(f"Parsed date: {parsed_date}")
-        return parsed_date
+        return parsed_date.isoformat()  # Ensure ISO 8601 output
     except ValueError as e:
         logging.error(f"Date parsing error for date_str '{date_str}': {e}")
-        return datetime.datetime.now()
+        return datetime.datetime.now().isoformat()
 
 def extract_date(article):
     """Extract date from an article, handling both <span> and <time> tags."""
@@ -100,7 +99,6 @@ def scrape_news(url, selector):
         return []
 
 def create_or_update_json_feed(items, output_file):
-    """Create or update a JSON feed with current date items."""
     output_path = os.path.join(script_directory, output_file)
     today = datetime.datetime.now().date()
 
@@ -109,8 +107,16 @@ def create_or_update_json_feed(items, output_file):
             try:
                 existing_data = json.load(file)
                 existing_items = existing_data.get('items', [])
-                # Keep only items from today
-                existing_items = [item for item in existing_items if datetime.datetime.fromisoformat(item['pubDate']).date() == today]
+                # Parse pubDate safely
+                filtered_items = []
+                for item in existing_items:
+                    try:
+                        pub_date = parser.parse(item['pubDate'])  # Handle RFC 2822 or other formats
+                        if pub_date.date() == today:
+                            filtered_items.append(item)
+                    except ValueError:
+                        logging.warning(f"Skipping item with invalid pubDate: {item['pubDate']}")
+                existing_items = filtered_items
             except json.JSONDecodeError:
                 logging.warning(f"Failed to decode JSON from {output_path}. Creating a new feed.")
                 existing_items = []
@@ -136,25 +142,6 @@ def create_or_update_json_feed(items, output_file):
             logging.info(f"JSON feed successfully written to {output_path}.")
     except Exception as e:
         logging.error(f"Failed to write JSON feed to {output_path}: {e}")
-
-def send_to_telegram(bot_token, chat_id, message):
-    telegram_api_url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
-    payload = {
-        'chat_id': chat_id,
-        'text': message,
-        'parse_mode': 'Markdown'
-    }
-    try:
-        response = requests.post(telegram_api_url, data=payload)
-        response.raise_for_status()
-    except requests.exceptions.HTTPError as http_err:
-        if response.status_code == 429:
-            logging.warning("Rate limit exceeded. Waiting before retrying...")
-            time.sleep(60)
-        else:
-            logging.error(f"HTTP error occurred: {http_err}")
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Failed to send message to Telegram: {e}")
 
 def read_sent_ids(file_path):
     """Read the set of sent IDs from a file."""
