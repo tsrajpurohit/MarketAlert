@@ -238,15 +238,6 @@ def process_source(source, bot_token, chat_id):
             write_sent_ids(sent_ids_file_path, sent_ids.union(new_ids))
             logging.info(f"Sent alerts updated in {sent_ids_file_path}")
 
-def validate_env_vars(bot_token, chat_id):
-    """Validate Telegram environment variables."""
-    if not bot_token or not bot_token.startswith('bot'):
-        logging.error("Invalid Telegram bot token format.")
-        return False
-    if not chat_id or not chat_id.startswith(('-', '@')):
-        logging.error("Invalid Telegram chat ID format.")
-        return False
-    return True
 
 def main():
     bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
