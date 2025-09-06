@@ -243,8 +243,7 @@ def main():
     bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
     chat_id = os.environ.get('TELEGRAM_CHAT_ID')
 
-    if not validate_env_vars(bot_token, chat_id):
-        return
+   
 
     sources = [
         {
