@@ -166,6 +166,7 @@ def create_or_update_json_feed(items, output_file):
         logging.error(f"Failed to write JSON feed to {output_path}: {e}")
 
 def send_to_telegram(bot_token, chat_id, message):
+    """Send a message to a Telegram chat."""
     telegram_api_url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
     payload = {
         'chat_id': chat_id,
@@ -173,14 +174,16 @@ def send_to_telegram(bot_token, chat_id, message):
         'parse_mode': 'Markdown'
     }
     try:
-        response = requests.post(telegram_api_url, data=payload)
+        response = requests.post(telegram_api_url, data=payload, timeout=10)
         response.raise_for_status()
+        time.sleep(2)  # Avoid Telegram rate limits
     except requests.exceptions.HTTPError as http_err:
         if response.status_code == 429:
-            logging.warning("Rate limit exceeded. Waiting before retrying...")
-            time.sleep(60)
+            retry_after = int(response.headers.get('Retry-After', 60))
+            logging.warning(f"Telegram rate limit exceeded. Waiting {retry_after} seconds...")
+            time.sleep(retry_after)
         else:
-            logging.error(f"HTTP error occurred: {http_err}")
+            logging.error(f"HTTP error sending to Telegram: {http_err}")
     except requests.exceptions.RequestException as e:
         logging.error(f"Failed to send message to Telegram: {e}")
 
