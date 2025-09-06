@@ -237,29 +237,45 @@ def fetch_newsdata_articles(query="finance OR industry OR business", max_results
 
 def fetch_bs_rss_articles():
     feeds = [
-        "https://www.business-standard.com/rss/mutual-funds.rss",
-        "https://www.business-standard.com/rss/ipos.rss",
-        "https://www.business-standard.com/rss/capital-market-news.rss",
-        "https://www.business-standard.com/rss/markets-news.rss"
-        "https://www.business-standard.com/rss/industry-217.rss"
+        # Business Standard
+        #{"url": "https://www.business-standard.com/rss/mutual-funds.rss", "source": "Business Standard - Mutual Funds"},
+        #{"url": "https://www.business-standard.com/rss/ipos.rss", "source": "Business Standard - IPOs"},
+        #{"url": "https://www.business-standard.com/rss/capital-market-news.rss", "source": "Business Standard - Capital Market"},
+        #{"url": "https://www.business-standard.com/rss/markets-news.rss", "source": "Business Standard - Markets"},
+
+        # Economic Times
+        #{"url": "https://economictimes.indiatimes.com/markets/stocks/earnings/rssfeeds/2146842.cms", "source": "ET - Earnings"},
+        #{"url": "https://economictimes.indiatimes.com/markets/stocks/rssfeeds/2146843.cms", "source": "ET - Stocks"},
+        #{"url": "https://economictimes.indiatimes.com/industry/rssfeeds/13352306.cms", "source": "ET - Industry"},
+
+        # LiveMint
+        #{"url": "https://www.livemint.com/rss/industry", "source": "LiveMint - Industry"},
+
+        # CNBC
+        #{"url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147", "source": "CNBC - Markets"},
+
+        # The Hindu
+        {"url": "https://www.thehindu.com/business/Industry/feeder/default.rss", "source": "The Hindu - Industry"},
     ]
+
     result = []
-    for feed_url in feeds:
+    for f in feeds:
         try:
-            feed = feedparser.parse(feed_url)
+            feed = feedparser.parse(f["url"])
             for entry in feed.entries[:10]:
                 result.append({
                     "title": entry.get("title", "No title"),
                     "description": entry.get("summary", ""),
-                    "source_name": "Business Standard",
-                    "published": entry.get("published", TODAY).split(" ")[0],
+                    "source_name": f["source"],
+                    "published": entry.get("published", TODAY).split(" ")[0] if entry.get("published") else TODAY,
                     "url": entry.get("link", ""),
                     "image": fetch_image_from_url(entry.get("link", ""))
                 })
-            logging.info(f"Fetched RSS feed: {feed_url}")
+            logging.info(f"Fetched {len(feed.entries[:10])} items from {f['source']}")
         except Exception as e:
-            logging.error(f"RSS fetch failed: {feed_url} {e}")
+            logging.error(f"RSS fetch failed: {f['url']} {e}")
     return clean_articles(result)
+
 
 def fetch_scraped_articles():
     sources = [
