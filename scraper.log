@@ -5489,3 +5489,12 @@
 2025-10-14 23:15:45,597 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
 2025-10-14 23:15:45,947 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2025-10-14 23:15:45,952 - INFO - Scraping process completed.
+2025-10-14 23:28:34,185 - INFO - Starting news scraping process...
+2025-10-14 23:28:34,496 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2025-10-14 23:28:34,672 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2025-10-14 23:28:35,008 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2025-10-14 23:28:36,744 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-10-14 23:28:37,249 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2025-10-14 23:28:37,313 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2025-10-14 23:28:37,368 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2025-10-14 23:28:37,368 - INFO - Scraping process completed.
