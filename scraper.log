@@ -18926,3 +18926,16 @@
 2025-10-29 06:48:23,589 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
 2025-10-29 06:48:23,693 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2025-10-29 06:48:23,701 - INFO - Scraping process completed.
+2025-10-29 06:58:37,324 - INFO - Starting news scraping process...
+2025-10-29 06:58:39,317 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-10-29 06:58:39,637 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2025-10-29 06:58:39,771 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2025-10-29 06:58:39,906 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2025-10-29 06:59:00,727 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 16 items.
+2025-10-29 06:59:00,727 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2025-10-29 06:59:00,727 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2025-10-29 06:59:00,731 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2025-10-29 06:59:01,770 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-10-29 06:59:02,046 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2025-10-29 06:59:02,673 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-10-29 06:59:02,677 - INFO - Scraping process completed.
