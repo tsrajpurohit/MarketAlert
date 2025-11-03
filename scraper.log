@@ -24157,3 +24157,13 @@
 2025-11-03 19:50:05,410 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
 2025-11-03 19:50:05,460 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
 2025-11-03 19:50:05,461 - INFO - Scraping process completed.
+2025-11-03 19:57:32,301 - INFO - Starting news scraping process...
+2025-11-03 19:57:32,465 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2025-11-03 19:57:34,523 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-11-03 19:57:34,569 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2025-11-03 19:57:34,625 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2025-11-03 19:57:34,673 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2025-11-03 19:57:34,813 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2025-11-03 19:57:38,516 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-11-03 19:57:38,644 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2025-11-03 19:57:38,645 - INFO - Scraping process completed.
