@@ -28268,3 +28268,11 @@
 2025-11-08 11:42:44,653 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
 2025-11-08 11:42:44,654 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
 2025-11-08 11:42:44,655 - INFO - Scraping process completed.
+2025-11-08 11:50:10,401 - INFO - Starting news scraping process...
+2025-11-08 11:50:10,578 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2025-11-08 11:50:10,659 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2025-11-08 11:50:12,997 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-11-08 11:50:13,059 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2025-11-08 11:50:13,816 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-11-08 11:50:13,947 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2025-11-08 11:50:13,948 - INFO - Scraping process completed.
