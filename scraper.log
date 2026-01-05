@@ -2672,3 +2672,15 @@
 2026-01-05 07:57:59,905 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
 2026-01-05 07:57:59,912 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-01-05 07:57:59,912 - INFO - Scraping process completed.
+2026-01-05 08:33:03,131 - INFO - Starting news scraping process...
+2026-01-05 08:33:04,949 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-01-05 08:33:05,090 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-01-05 08:33:05,152 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-01-05 08:33:05,836 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-01-05 08:33:05,906 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-01-05 08:33:06,028 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-01-05 08:33:08,096 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 29 items.
+2026-01-05 08:33:08,096 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-01-05 08:33:08,097 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-01-05 08:33:08,103 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-01-05 08:33:08,103 - INFO - Scraping process completed.
