@@ -4001,3 +4001,16 @@
 2026-01-07 10:59:02,182 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-01-07 10:59:02,295 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
 2026-01-07 10:59:02,296 - INFO - Scraping process completed.
+2026-01-07 11:22:49,041 - INFO - Starting news scraping process...
+2026-01-07 11:22:50,605 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-01-07 11:23:51,155 - ERROR - Failed to send message to Telegram: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-01-07 11:23:51,156 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 52 items.
+2026-01-07 11:23:51,156 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-01-07 11:23:51,157 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-01-07 11:23:51,163 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-01-07 11:23:51,211 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-01-07 11:23:51,632 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-01-07 11:23:51,675 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-01-07 11:23:51,716 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-01-07 11:23:51,757 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-01-07 11:23:51,758 - INFO - Scraping process completed.
