@@ -9298,3 +9298,16 @@
 2026-01-15 11:57:49,142 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
 2026-01-15 11:57:49,144 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
 2026-01-15 11:57:49,144 - INFO - Scraping process completed.
+2026-01-15 12:44:29,547 - INFO - Starting news scraping process...
+2026-01-15 12:44:29,634 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-01-15 12:44:33,385 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 41 items.
+2026-01-15 12:44:33,386 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-01-15 12:44:33,386 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-01-15 12:44:33,393 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-01-15 12:44:33,436 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-01-15 12:44:34,674 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-01-15 12:44:35,062 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-01-15 12:44:37,155 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-01-15 12:44:37,201 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-01-15 12:44:37,246 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-01-15 12:44:37,247 - INFO - Scraping process completed.
