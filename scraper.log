@@ -13572,3 +13572,15 @@
 2026-01-22 10:53:54,989 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
 2026-01-22 10:53:56,071 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-01-22 10:53:56,078 - INFO - Scraping process completed.
+2026-01-22 11:14:59,616 - INFO - Starting news scraping process...
+2026-01-22 11:15:00,942 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-01-22 11:15:02,976 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 8 items.
+2026-01-22 11:15:02,976 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-01-22 11:15:02,977 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-01-22 11:15:02,978 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-01-22 11:15:03,096 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-01-22 11:15:03,480 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-01-22 11:15:03,526 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-01-22 11:15:03,563 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-01-22 11:15:03,755 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-01-22 11:15:03,756 - INFO - Scraping process completed.
