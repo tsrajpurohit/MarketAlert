@@ -14111,3 +14111,15 @@
 2026-01-23 10:25:24,505 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
 2026-01-23 10:25:24,512 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-01-23 10:25:24,512 - INFO - Scraping process completed.
+2026-01-23 10:49:08,491 - INFO - Starting news scraping process...
+2026-01-23 10:49:10,670 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-01-23 10:49:10,881 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-01-23 10:49:10,945 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-01-23 10:49:11,010 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-01-23 10:49:11,074 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-01-23 10:49:11,752 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-01-23 10:49:14,466 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 7 items.
+2026-01-23 10:49:14,466 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-01-23 10:49:14,466 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-01-23 10:49:14,467 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-01-23 10:49:15,140 - INFO - Scraping process completed.
