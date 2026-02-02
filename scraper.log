@@ -19361,3 +19361,16 @@
 2026-02-02 16:17:57,591 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-02-02 16:17:58,046 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-02-02 16:17:58,051 - INFO - Scraping process completed.
+2026-02-02 17:03:43,444 - INFO - Starting news scraping process...
+2026-02-02 17:03:43,675 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-02-02 17:03:43,916 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-02-02 17:03:45,200 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-02 17:03:46,204 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-02 17:03:46,421 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-02-02 17:03:47,923 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 41 items.
+2026-02-02 17:03:47,923 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-02-02 17:03:47,923 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-02-02 17:03:47,931 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-02-02 17:03:48,354 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-02 17:03:48,533 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-02-02 17:03:48,534 - INFO - Scraping process completed.
