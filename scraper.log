@@ -19457,3 +19457,15 @@
 2026-02-03 04:27:42,516 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-02-03 04:27:42,962 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-02-03 04:27:42,964 - INFO - Scraping process completed.
+2026-02-03 05:33:19,522 - INFO - Starting news scraping process...
+2026-02-03 05:33:19,643 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-02-03 05:33:20,821 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-03 05:33:20,889 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-02-03 05:33:23,838 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 28 items.
+2026-02-03 05:33:23,839 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-02-03 05:33:23,839 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-02-03 05:33:23,847 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-02-03 05:33:24,266 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-03 05:33:24,339 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-02-03 05:33:24,394 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-02-03 05:33:25,626 - INFO - Scraping process completed.
