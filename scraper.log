@@ -21665,3 +21665,29 @@
 2026-02-09 03:50:44,280 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
 2026-02-09 03:50:44,333 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
 2026-02-09 03:50:44,334 - INFO - Scraping process completed.
+2026-02-09 05:20:47,107 - INFO - Starting news scraping process...
+2026-02-09 05:20:50,291 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-09 05:20:50,723 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-09 05:21:12,525 - WARNING - Failed to decode JSON from /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json. Creating a new feed.
+2026-02-09 05:21:12,525 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json with 20 items.
+2026-02-09 05:21:12,526 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json.
+2026-02-09 05:21:12,526 - INFO - JSON feed created/updated successfully: businessstandard_ipos_rss_feed.json
+2026-02-09 05:21:12,527 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_sent_ids.json
+2026-02-09 05:21:13,932 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-02-09 05:22:34,056 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_mutual_fund_rss_feed.json with 20 items.
+2026-02-09 05:22:34,056 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_mutual_fund_rss_feed.json.
+2026-02-09 05:22:34,056 - INFO - JSON feed created/updated successfully: businessstandard_mutual_fund_rss_feed.json
+2026-02-09 05:22:34,057 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_mutual_fund_sent_ids.json
+2026-02-09 05:22:35,227 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-02-09 05:23:54,935 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 20 items.
+2026-02-09 05:23:54,935 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-02-09 05:23:54,935 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-02-09 05:23:54,937 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-02-09 05:23:55,830 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-09 05:23:58,168 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-02-09 05:25:16,949 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 20 items.
+2026-02-09 05:25:16,949 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2026-02-09 05:25:16,949 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2026-02-09 05:25:16,952 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2026-02-09 05:25:17,415 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-09 05:25:17,419 - INFO - Scraping process completed.
