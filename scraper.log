@@ -21940,3 +21940,18 @@
 2026-02-10 03:56:16,748 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
 2026-02-10 03:56:16,756 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-02-10 03:56:16,757 - INFO - Scraping process completed.
+2026-02-10 05:23:22,777 - INFO - Starting news scraping process...
+2026-02-10 05:23:25,907 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-10 05:23:45,197 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 36 items.
+2026-02-10 05:23:45,198 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2026-02-10 05:23:45,198 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2026-02-10 05:23:45,200 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2026-02-10 05:23:45,551 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-10 05:23:49,382 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-02-10 05:24:49,975 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 13 items.
+2026-02-10 05:24:49,975 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-02-10 05:24:49,976 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-02-10 05:24:49,977 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-02-10 05:24:51,194 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-10 05:24:51,619 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-10 05:24:53,392 - INFO - Scraping process completed.
