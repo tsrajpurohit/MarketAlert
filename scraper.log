@@ -22248,3 +22248,17 @@
 2026-02-11 05:54:43,563 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
 2026-02-11 05:54:43,571 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-02-11 05:54:43,571 - INFO - Scraping process completed.
+2026-02-11 06:45:31,835 - INFO - Starting news scraping process...
+2026-02-11 06:45:33,325 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-11 06:45:34,316 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-11 06:45:42,535 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 42 items.
+2026-02-11 06:45:42,535 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2026-02-11 06:45:42,535 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2026-02-11 06:45:42,538 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2026-02-11 06:45:49,158 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-11 06:45:50,398 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 16 items.
+2026-02-11 06:45:50,398 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-02-11 06:45:50,398 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-02-11 06:45:50,400 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-02-11 06:45:50,831 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-11 06:45:50,835 - INFO - Scraping process completed.
