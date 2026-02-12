@@ -22646,3 +22646,17 @@
 2026-02-12 10:09:22,623 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
 2026-02-12 10:09:22,626 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
 2026-02-12 10:09:25,981 - INFO - Scraping process completed.
+2026-02-12 11:04:03,826 - INFO - Starting news scraping process...
+2026-02-12 11:04:05,010 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-12 11:04:28,092 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 106 items.
+2026-02-12 11:04:28,093 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2026-02-12 11:04:28,093 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2026-02-12 11:04:28,096 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2026-02-12 11:04:29,034 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-02-12 11:05:29,036 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 26 items.
+2026-02-12 11:05:29,036 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-02-12 11:05:29,036 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-02-12 11:05:29,044 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-02-12 11:05:29,765 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-12 11:05:30,278 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-12 11:05:30,283 - INFO - Scraping process completed.
