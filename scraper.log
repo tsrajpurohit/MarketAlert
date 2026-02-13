@@ -22918,3 +22918,20 @@
 2026-02-13 07:38:03,917 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
 2026-02-13 07:38:03,920 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
 2026-02-13 07:38:03,920 - INFO - Scraping process completed.
+2026-02-13 08:06:57,686 - INFO - Starting news scraping process...
+2026-02-13 08:06:59,054 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-13 08:06:59,859 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-13 08:07:01,171 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 29 items.
+2026-02-13 08:07:01,171 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-02-13 08:07:01,171 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-02-13 08:07:01,180 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-02-13 08:07:01,661 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-02-13 08:07:03,838 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 29 items.
+2026-02-13 08:07:03,838 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-02-13 08:07:03,838 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-02-13 08:07:03,840 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-02-13 08:07:07,694 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 78 items.
+2026-02-13 08:07:07,695 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2026-02-13 08:07:07,696 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2026-02-13 08:07:07,698 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2026-02-13 08:07:07,699 - INFO - Scraping process completed.
