@@ -33580,3 +33580,15 @@
 2026-03-16 04:10:49,785 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
 2026-03-16 04:10:50,002 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-03-16 04:10:50,009 - INFO - Scraping process completed.
+2026-03-16 05:55:53,845 - INFO - Starting news scraping process...
+2026-03-16 05:55:53,994 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-03-16 05:55:55,682 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-03-16 05:56:02,749 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 32 items.
+2026-03-16 05:56:02,749 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-03-16 05:56:02,750 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-03-16 05:56:02,759 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-03-16 05:56:03,310 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-03-16 05:56:03,359 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-03-16 05:56:03,935 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-03-16 05:56:03,976 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-03-16 05:56:03,977 - INFO - Scraping process completed.
