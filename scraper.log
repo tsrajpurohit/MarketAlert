@@ -34712,3 +34712,15 @@
 2026-03-20 10:53:49,950 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
 2026-03-20 10:53:51,044 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-03-20 10:53:51,051 - INFO - Scraping process completed.
+2026-03-20 11:22:00,753 - INFO - Starting news scraping process...
+2026-03-20 11:22:02,230 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 39 items.
+2026-03-20 11:22:02,231 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-03-20 11:22:02,231 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-03-20 11:22:02,240 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-03-20 11:22:02,417 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-03-20 11:22:02,870 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-03-20 11:22:02,946 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-03-20 11:22:03,010 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-03-20 11:22:03,567 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-03-20 11:22:03,905 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-03-20 11:22:03,912 - INFO - Scraping process completed.
