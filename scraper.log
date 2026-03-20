@@ -34668,3 +34668,15 @@
 2026-03-20 08:01:42,810 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
 2026-03-20 08:01:43,214 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-03-20 08:01:43,216 - INFO - Scraping process completed.
+2026-03-20 08:53:56,791 - INFO - Starting news scraping process...
+2026-03-20 08:53:57,559 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-03-20 08:53:57,835 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-03-20 08:53:59,140 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 34 items.
+2026-03-20 08:53:59,140 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-03-20 08:53:59,141 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-03-20 08:53:59,150 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-03-20 08:54:01,539 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-03-20 08:54:02,093 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-03-20 08:54:02,167 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-03-20 08:54:02,246 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-03-20 08:54:02,247 - INFO - Scraping process completed.
