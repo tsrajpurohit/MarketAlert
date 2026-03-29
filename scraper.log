@@ -37432,3 +37432,15 @@
 2026-03-29 13:05:12,722 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
 2026-03-29 13:05:13,091 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-03-29 13:05:13,093 - INFO - Scraping process completed.
+2026-03-29 13:57:09,014 - INFO - Starting news scraping process...
+2026-03-29 13:57:10,523 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 16 items.
+2026-03-29 13:57:10,523 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-03-29 13:57:10,524 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-03-29 13:57:10,532 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-03-29 13:57:11,728 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-03-29 13:57:11,948 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-03-29 13:57:12,065 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-03-29 13:57:12,168 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-03-29 13:57:13,102 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-03-29 13:57:13,281 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-03-29 13:57:13,282 - INFO - Scraping process completed.
