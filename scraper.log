@@ -38077,3 +38077,15 @@
 2026-04-01 07:49:41,365 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
 2026-04-01 07:49:42,165 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-04-01 07:49:42,173 - INFO - Scraping process completed.
+2026-04-01 08:48:54,653 - INFO - Starting news scraping process...
+2026-04-01 08:48:57,063 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 33 items.
+2026-04-01 08:48:57,063 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-04-01 08:48:57,063 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-04-01 08:48:57,072 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-04-01 08:48:58,542 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-04-01 08:48:58,786 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-04-01 08:49:00,515 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-04-01 08:49:00,567 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-04-01 08:49:00,628 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-04-01 08:49:00,666 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-04-01 08:49:01,372 - INFO - Scraping process completed.
