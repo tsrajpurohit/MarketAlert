@@ -41645,3 +41645,19 @@
 2026-04-16 06:16:41,270 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-04-16 06:16:41,755 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
 2026-04-16 06:16:41,756 - INFO - Scraping process completed.
+2026-04-16 08:05:09,568 - INFO - Starting news scraping process...
+2026-04-16 08:05:09,993 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-04-16 08:05:10,131 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-04-16 08:05:10,174 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-04-16 08:05:10,214 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-04-16 08:05:11,347 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 1 items.
+2026-04-16 08:05:11,347 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-04-16 08:05:11,347 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-04-16 08:05:11,349 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-04-16 08:05:12,905 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-04-16 08:05:12,955 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-04-16 08:05:19,381 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 32 items.
+2026-04-16 08:05:19,381 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-04-16 08:05:19,382 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-04-16 08:05:19,390 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-04-16 08:05:19,391 - INFO - Scraping process completed.
