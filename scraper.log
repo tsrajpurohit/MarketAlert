@@ -42333,3 +42333,15 @@
 2026-04-19 05:48:50,662 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-04-19 05:48:51,061 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-04-19 05:48:51,064 - INFO - Scraping process completed.
+2026-04-19 07:02:07,345 - INFO - Starting news scraping process...
+2026-04-19 07:02:07,616 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-04-19 07:02:08,593 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-04-19 07:02:08,656 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-04-19 07:02:09,160 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-04-19 07:02:09,518 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-04-19 07:02:09,582 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-04-19 07:02:10,448 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 7 items.
+2026-04-19 07:02:10,449 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-04-19 07:02:10,449 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-04-19 07:02:10,458 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-04-19 07:02:10,459 - INFO - Scraping process completed.
