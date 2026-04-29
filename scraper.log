@@ -44477,3 +44477,20 @@
 2026-04-29 12:52:18,452 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
 2026-04-29 12:52:18,841 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-04-29 12:52:18,848 - INFO - Scraping process completed.
+2026-04-29 14:59:21,210 - INFO - Starting news scraping process...
+2026-04-29 14:59:21,296 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-04-29 14:59:21,336 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-04-29 14:59:21,807 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-04-29 14:59:38,678 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 10 items.
+2026-04-29 14:59:38,678 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-04-29 14:59:38,679 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-04-29 14:59:38,680 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-04-29 14:59:38,727 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-04-29 14:59:38,769 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-04-29 14:59:39,226 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-04-29 14:59:56,464 - ERROR - Failed to send message to Telegram: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2026-04-29 14:59:58,128 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 53 items.
+2026-04-29 14:59:58,129 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-04-29 14:59:58,129 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-04-29 14:59:58,138 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-04-29 14:59:58,138 - INFO - Scraping process completed.
