@@ -45387,3 +45387,15 @@
 2026-05-04 12:56:01,750 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
 2026-05-04 12:56:02,726 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-05-04 12:56:02,732 - INFO - Scraping process completed.
+2026-05-04 15:06:33,953 - INFO - Starting news scraping process...
+2026-05-04 15:06:36,929 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 8 items.
+2026-05-04 15:06:36,929 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-05-04 15:06:36,930 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-05-04 15:06:36,931 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-05-04 15:06:37,036 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-05-04 15:06:37,453 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-05-04 15:06:38,222 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-05-04 15:06:38,278 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-05-04 15:06:38,315 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-05-04 15:06:38,356 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-05-04 15:06:38,357 - INFO - Scraping process completed.
