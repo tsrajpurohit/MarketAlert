@@ -45665,3 +45665,18 @@
 2026-05-05 23:10:59,177 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
 2026-05-05 23:10:59,292 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
 2026-05-05 23:10:59,292 - INFO - Scraping process completed.
+2026-05-06 00:01:40,718 - INFO - Starting news scraping process...
+2026-05-06 00:01:40,879 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-05-06 00:01:41,002 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-05-06 00:01:41,072 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-05-06 00:01:41,145 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-05-06 00:01:42,835 - ERROR - HTTP error occurred: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8/sendMessage
+2026-05-06 00:01:43,277 - ERROR - HTTP error occurred: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8/sendMessage
+2026-05-06 00:01:43,743 - ERROR - HTTP error occurred: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8/sendMessage
+2026-05-06 00:01:43,745 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 3 items.
+2026-05-06 00:01:43,745 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-05-06 00:01:43,745 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-05-06 00:01:43,754 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-05-06 00:01:43,817 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-05-06 00:01:43,896 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-05-06 00:01:43,897 - INFO - Scraping process completed.
