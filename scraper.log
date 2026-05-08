@@ -46287,3 +46287,23 @@
 2026-05-08 05:48:50,772 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-05-08 05:48:50,856 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
 2026-05-08 05:48:50,857 - INFO - Scraping process completed.
+2026-05-08 07:10:03,651 - INFO - Starting news scraping process...
+2026-05-08 07:10:04,130 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-05-08 07:10:04,189 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-05-08 07:10:04,883 - ERROR - HTTP error occurred: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8/sendMessage
+2026-05-08 07:10:05,367 - ERROR - HTTP error occurred: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8/sendMessage
+2026-05-08 07:10:05,852 - ERROR - HTTP error occurred: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8/sendMessage
+2026-05-08 07:10:06,342 - ERROR - HTTP error occurred: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8/sendMessage
+2026-05-08 07:10:06,825 - ERROR - HTTP error occurred: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8/sendMessage
+2026-05-08 07:10:07,299 - ERROR - HTTP error occurred: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8/sendMessage
+2026-05-08 07:10:07,803 - ERROR - HTTP error occurred: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8/sendMessage
+2026-05-08 07:10:08,284 - ERROR - HTTP error occurred: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8/sendMessage
+2026-05-08 07:10:08,286 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 35 items.
+2026-05-08 07:10:08,286 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-05-08 07:10:08,286 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-05-08 07:10:08,294 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-05-08 07:10:08,333 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-05-08 07:10:08,785 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-05-08 07:10:08,825 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-05-08 07:10:08,971 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-05-08 07:10:08,971 - INFO - Scraping process completed.
