@@ -48490,3 +48490,21 @@
 2026-05-21 13:40:25,279 - INFO - JSON feed created/updated successfully: moneycontrol_companies_rss_feed.json
 2026-05-21 13:40:25,281 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol__companies_sent_ids.json
 2026-05-21 13:40:25,281 - INFO - Scraping process completed.
+2026-05-21 16:27:10,689 - INFO - Starting news scraping process...
+2026-05-21 16:27:13,461 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 42 items.
+2026-05-21 16:27:13,462 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-05-21 16:27:13,462 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-05-21 16:27:13,472 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-05-21 16:27:13,625 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-05-21 16:27:13,732 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-05-21 16:27:19,568 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 11 items.
+2026-05-21 16:27:19,569 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-05-21 16:27:19,569 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-05-21 16:27:19,570 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-05-21 16:27:20,660 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-05-21 16:27:20,752 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-05-21 16:27:22,856 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 29 items.
+2026-05-21 16:27:22,856 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2026-05-21 16:27:22,856 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2026-05-21 16:27:22,862 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2026-05-21 16:27:22,863 - INFO - Scraping process completed.
