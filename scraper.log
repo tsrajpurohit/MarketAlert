@@ -50302,3 +50302,15 @@
 2026-06-06 05:41:56,920 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
 2026-06-06 05:41:56,931 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-06-06 05:41:56,931 - INFO - Scraping process completed.
+2026-06-06 08:11:35,535 - INFO - Starting news scraping process...
+2026-06-06 08:11:39,366 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 8 items.
+2026-06-06 08:11:39,366 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-06-06 08:11:39,366 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-06-06 08:11:39,377 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-06-06 08:11:39,638 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-06-06 08:11:40,231 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-06-06 08:11:40,308 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-06-06 08:11:40,979 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-06-06 08:11:41,073 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-06-06 08:11:41,856 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-06-06 08:11:41,865 - INFO - Scraping process completed.
