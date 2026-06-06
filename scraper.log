@@ -50278,3 +50278,15 @@
 2026-06-05 23:51:50,334 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
 2026-06-05 23:51:50,402 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
 2026-06-05 23:51:50,812 - INFO - Scraping process completed.
+2026-06-06 01:47:53,170 - INFO - Starting news scraping process...
+2026-06-06 01:47:53,365 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-06-06 01:47:55,143 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 1 items.
+2026-06-06 01:47:55,143 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-06-06 01:47:55,144 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-06-06 01:47:55,154 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-06-06 01:47:55,259 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-06-06 01:47:55,979 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-06-06 01:47:56,060 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-06-06 01:47:56,837 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-06-06 01:47:57,716 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-06-06 01:47:57,723 - INFO - Scraping process completed.
