@@ -50978,3 +50978,19 @@
 2026-06-12 11:06:57,984 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
 2026-06-12 11:06:58,024 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
 2026-06-12 11:06:58,175 - INFO - Scraping process completed.
+2026-06-12 14:13:28,621 - INFO - Starting news scraping process...
+2026-06-12 14:13:28,822 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-06-12 14:13:28,957 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-06-12 14:13:52,721 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-06-12 14:14:55,541 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 29 items.
+2026-06-12 14:14:55,542 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2026-06-12 14:14:55,542 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2026-06-12 14:14:55,548 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2026-06-12 14:14:56,096 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-06-12 14:14:56,353 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-06-12 14:14:59,219 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 32 items.
+2026-06-12 14:14:59,219 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-06-12 14:14:59,220 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-06-12 14:14:59,230 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-06-12 14:14:59,373 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-06-12 14:14:59,374 - INFO - Scraping process completed.
