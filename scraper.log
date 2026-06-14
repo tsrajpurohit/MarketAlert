@@ -51260,3 +51260,15 @@
 2026-06-14 22:48:43,012 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
 2026-06-14 22:48:43,144 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
 2026-06-14 22:48:43,320 - INFO - Scraping process completed.
+2026-06-14 23:55:01,092 - INFO - Starting news scraping process...
+2026-06-14 23:55:01,261 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-06-14 23:55:01,399 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-06-14 23:55:02,388 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 15 items.
+2026-06-14 23:55:02,388 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-06-14 23:55:02,389 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-06-14 23:55:02,399 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-06-14 23:55:02,439 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-06-14 23:55:02,479 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-06-14 23:55:02,906 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-06-14 23:55:02,988 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-06-14 23:55:02,989 - INFO - Scraping process completed.
