@@ -51586,3 +51586,11 @@
 2026-06-18 19:53:17,784 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
 2026-06-18 19:53:17,794 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-06-18 19:53:17,795 - INFO - Scraping process completed.
+2026-06-18 21:53:50,693 - INFO - Starting news scraping process...
+2026-06-18 21:53:50,877 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-06-18 21:53:51,473 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-06-18 21:53:51,522 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-06-18 21:53:52,102 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-06-18 21:53:52,159 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-06-18 21:53:52,211 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-06-18 21:53:52,212 - INFO - Scraping process completed.
