@@ -52300,3 +52300,15 @@
 2026-06-25 08:38:21,329 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
 2026-06-25 08:38:24,436 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-06-25 08:38:24,443 - INFO - Scraping process completed.
+2026-06-25 11:19:25,503 - INFO - Starting news scraping process...
+2026-06-25 11:19:27,420 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 36 items.
+2026-06-25 11:19:27,421 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-06-25 11:19:27,421 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-06-25 11:19:27,430 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-06-25 11:19:28,079 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-06-25 11:19:28,281 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-06-25 11:19:28,899 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-06-25 11:19:28,983 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-06-25 11:19:29,781 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-06-25 11:19:29,979 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-06-25 11:19:29,980 - INFO - Scraping process completed.
