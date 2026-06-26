@@ -52388,3 +52388,15 @@
 2026-06-26 01:32:09,463 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
 2026-06-26 01:32:09,502 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
 2026-06-26 01:32:09,503 - INFO - Scraping process completed.
+2026-06-26 05:51:13,580 - INFO - Starting news scraping process...
+2026-06-26 05:51:13,649 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-06-26 05:51:13,686 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-06-26 05:51:14,176 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-06-26 05:51:14,233 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-06-26 05:51:22,459 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 16 items.
+2026-06-26 05:51:22,460 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-06-26 05:51:22,460 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-06-26 05:51:22,470 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-06-26 05:51:22,653 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-06-26 05:51:23,104 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-06-26 05:51:23,106 - INFO - Scraping process completed.
