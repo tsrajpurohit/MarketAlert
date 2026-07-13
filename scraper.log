@@ -54681,3 +54681,15 @@
 2026-07-13 03:47:52,595 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
 2026-07-13 03:47:52,607 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-07-13 03:47:52,607 - INFO - Scraping process completed.
+2026-07-13 06:40:05,024 - INFO - Starting news scraping process...
+2026-07-13 06:40:05,799 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-07-13 06:40:27,584 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 26 items.
+2026-07-13 06:40:27,584 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-07-13 06:40:27,585 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-07-13 06:40:27,595 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-07-13 06:40:29,112 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-07-13 06:40:29,360 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-07-13 06:40:29,482 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-07-13 06:40:29,546 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-07-13 06:40:29,609 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-07-13 06:40:29,610 - INFO - Scraping process completed.
