@@ -55662,3 +55662,15 @@
 2026-07-18 10:23:28,110 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-07-18 10:23:28,149 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
 2026-07-18 10:23:28,150 - INFO - Scraping process completed.
+2026-07-18 11:27:02,883 - INFO - Starting news scraping process...
+2026-07-18 11:27:02,953 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-07-18 11:27:02,996 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-07-18 11:27:03,034 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-07-18 11:27:04,335 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-07-18 11:27:05,577 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 11 items.
+2026-07-18 11:27:05,577 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-07-18 11:27:05,578 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-07-18 11:27:05,580 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-07-18 11:27:06,140 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-07-18 11:27:06,180 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-07-18 11:27:06,181 - INFO - Scraping process completed.
