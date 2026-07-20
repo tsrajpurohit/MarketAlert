@@ -55978,3 +55978,15 @@
 2026-07-20 04:04:19,927 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
 2026-07-20 04:04:19,929 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
 2026-07-20 04:04:19,929 - INFO - Scraping process completed.
+2026-07-20 07:21:28,136 - INFO - Starting news scraping process...
+2026-07-20 07:21:29,680 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-07-20 07:21:29,967 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-07-20 07:21:30,007 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-07-20 07:21:30,055 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-07-20 07:21:30,748 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-07-20 07:21:30,818 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-07-20 07:21:50,427 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 30 items.
+2026-07-20 07:21:50,427 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-07-20 07:21:50,428 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-07-20 07:21:50,440 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-07-20 07:21:50,954 - INFO - Scraping process completed.
