@@ -56006,3 +56006,15 @@
 2026-07-20 10:21:52,296 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-07-20 10:21:52,492 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
 2026-07-20 10:21:52,493 - INFO - Scraping process completed.
+2026-07-20 12:27:33,705 - INFO - Starting news scraping process...
+2026-07-20 12:27:33,910 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/news
+2026-07-20 12:27:34,757 - ERROR - Error fetching data from https://www.business-standard.com/markets/mutual-fund: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/mutual-fund
+2026-07-20 12:27:34,861 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 403 Client Error: Forbidden for url: https://www.business-standard.com/markets/capital-market-news
+2026-07-20 12:27:34,945 - ERROR - Error fetching data from https://www.business-standard.com/topic/ipos: 403 Client Error: Forbidden for url: https://www.business-standard.com/topic/ipos
+2026-07-20 12:27:36,534 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-07-20 12:27:40,206 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 41 items.
+2026-07-20 12:27:40,206 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-07-20 12:27:40,206 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-07-20 12:27:40,219 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-07-20 12:27:40,960 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-07-20 12:27:40,966 - INFO - Scraping process completed.
