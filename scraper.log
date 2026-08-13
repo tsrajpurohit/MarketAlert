@@ -60698,3 +60698,28 @@
 2026-08-13 08:45:52,087 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-08-13 08:45:52,722 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-08-13 08:45:52,729 - INFO - Scraping process completed.
+2026-08-13 09:47:07,330 - INFO - Starting news scraping process...
+2026-08-13 09:47:08,236 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 41 items.
+2026-08-13 09:47:08,237 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-08-13 09:47:08,237 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-08-13 09:47:08,249 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-08-13 09:47:11,431 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json with 3 items.
+2026-08-13 09:47:11,431 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json.
+2026-08-13 09:47:11,431 - INFO - JSON feed created/updated successfully: businessstandard_ipos_rss_feed.json
+2026-08-13 09:47:11,431 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_sent_ids.json
+2026-08-13 09:47:13,730 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 23 items.
+2026-08-13 09:47:13,730 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-08-13 09:47:13,730 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-08-13 09:47:13,732 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-08-13 09:47:14,719 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 404 Client Error: Not Found for url: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/companies/
+2026-08-13 09:47:18,460 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 5 items.
+2026-08-13 09:47:18,460 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-08-13 09:47:18,460 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-08-13 09:47:18,462 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-08-13 09:47:19,230 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 404 Client Error: Not Found for url: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/stocks/
+2026-08-13 09:47:35,584 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-08-13 09:48:40,818 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 75 items.
+2026-08-13 09:48:40,818 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2026-08-13 09:48:40,819 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2026-08-13 09:48:40,822 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2026-08-13 09:48:40,822 - INFO - Scraping process completed.
