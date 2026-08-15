@@ -61258,3 +61258,11 @@
 2026-08-15 05:49:32,005 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
 2026-08-15 05:49:32,009 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
 2026-08-15 05:49:32,009 - INFO - Scraping process completed.
+2026-08-15 06:12:36,427 - INFO - Starting news scraping process...
+2026-08-15 06:12:37,142 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 404 Client Error: Not Found for url: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/companies/
+2026-08-15 06:12:38,402 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 404 Client Error: Not Found for url: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/stocks/
+2026-08-15 06:12:40,039 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 5 items.
+2026-08-15 06:12:40,039 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-08-15 06:12:40,039 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-08-15 06:12:40,052 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-08-15 06:12:40,599 - INFO - Scraping process completed.
