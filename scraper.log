@@ -61800,3 +61800,11 @@
 2026-08-16 23:21:26,756 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
 2026-08-16 23:21:27,334 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
 2026-08-16 23:21:28,333 - INFO - Scraping process completed.
+2026-08-16 23:38:29,719 - INFO - Starting news scraping process...
+2026-08-16 23:38:33,381 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-08-16 23:38:34,675 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 12 items.
+2026-08-16 23:38:34,676 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-08-16 23:38:34,680 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-08-16 23:38:34,731 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-08-16 23:38:35,320 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-08-16 23:38:35,321 - INFO - Scraping process completed.
