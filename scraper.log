@@ -61606,3 +61606,7 @@
 2026-08-16 09:35:41,598 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-08-16 09:35:43,221 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-08-16 09:35:43,228 - INFO - Scraping process completed.
+2026-08-16 09:54:45,345 - INFO - Starting news scraping process...
+2026-08-16 09:54:46,125 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 404 Client Error: Not Found for url: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/stocks/
+2026-08-16 09:54:47,652 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 404 Client Error: Not Found for url: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/companies/
+2026-08-16 09:54:47,866 - INFO - Scraping process completed.
