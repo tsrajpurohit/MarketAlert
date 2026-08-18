@@ -62597,3 +62597,15 @@
 2026-08-18 15:05:21,838 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-08-18 15:05:24,147 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-08-18 15:05:24,438 - INFO - Scraping process completed.
+2026-08-18 15:40:52,325 - INFO - Starting news scraping process...
+2026-08-18 15:40:54,728 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 43 items.
+2026-08-18 15:40:54,729 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-08-18 15:40:54,729 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-08-18 15:40:54,742 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-08-18 15:40:55,633 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 404 Client Error: Not Found for url: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/companies/
+2026-08-18 15:40:57,281 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 22 items.
+2026-08-18 15:40:57,281 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-08-18 15:40:57,281 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-08-18 15:40:57,283 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-08-18 15:40:58,024 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 404 Client Error: Not Found for url: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/stocks/
+2026-08-18 15:40:59,766 - INFO - Scraping process completed.
