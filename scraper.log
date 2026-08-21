@@ -63834,3 +63834,15 @@
 2026-08-21 12:50:33,301 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
 2026-08-21 12:50:33,304 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
 2026-08-21 12:50:33,304 - INFO - Scraping process completed.
+2026-08-21 13:34:14,291 - INFO - Starting news scraping process...
+2026-08-21 13:34:17,801 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-08-21 13:34:22,454 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json with 4 items.
+2026-08-21 13:34:22,454 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json.
+2026-08-21 13:34:22,454 - INFO - JSON feed created/updated successfully: businessstandard_ipos_rss_feed.json
+2026-08-21 13:34:22,455 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_sent_ids.json
+2026-08-21 13:34:23,014 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-08-21 13:34:23,815 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_mutual_fund_rss_feed.json with 1 items.
+2026-08-21 13:34:23,815 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_mutual_fund_rss_feed.json.
+2026-08-21 13:34:23,816 - INFO - JSON feed created/updated successfully: businessstandard_mutual_fund_rss_feed.json
+2026-08-21 13:34:23,816 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_mutual_fund_sent_ids.json
+2026-08-21 13:34:23,816 - INFO - Scraping process completed.
