@@ -63846,3 +63846,11 @@
 2026-08-21 13:34:23,816 - INFO - JSON feed created/updated successfully: businessstandard_mutual_fund_rss_feed.json
 2026-08-21 13:34:23,816 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_mutual_fund_sent_ids.json
 2026-08-21 13:34:23,816 - INFO - Scraping process completed.
+2026-08-21 14:09:04,911 - INFO - Starting news scraping process...
+2026-08-21 14:09:09,470 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-08-21 14:09:16,838 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 82 items.
+2026-08-21 14:09:16,839 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2026-08-21 14:09:16,839 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2026-08-21 14:09:16,841 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2026-08-21 14:09:17,901 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-08-21 14:09:18,489 - INFO - Scraping process completed.
