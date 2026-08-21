@@ -63862,3 +63862,15 @@
 2026-08-21 14:50:47,687 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-08-21 14:50:48,636 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-08-21 14:50:48,643 - INFO - Scraping process completed.
+2026-08-21 15:17:32,207 - INFO - Starting news scraping process...
+2026-08-21 15:17:33,658 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 25 items.
+2026-08-21 15:17:33,658 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-08-21 15:17:33,659 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-08-21 15:17:33,660 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-08-21 15:17:35,222 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 56 items.
+2026-08-21 15:17:35,222 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-08-21 15:17:35,223 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-08-21 15:17:35,236 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-08-21 15:17:36,956 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-08-21 15:17:39,474 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-08-21 15:17:39,636 - INFO - Scraping process completed.
