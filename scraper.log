@@ -64109,3 +64109,11 @@
 2026-08-22 09:55:17,277 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
 2026-08-22 09:55:17,284 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
 2026-08-22 09:55:17,454 - INFO - Scraping process completed.
+2026-08-22 10:11:04,274 - INFO - Starting news scraping process...
+2026-08-22 10:11:06,303 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 12 items.
+2026-08-22 10:11:06,304 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-08-22 10:11:06,304 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-08-22 10:11:06,316 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-08-22 10:11:07,163 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-08-22 10:11:07,793 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-08-22 10:11:09,410 - INFO - Scraping process completed.
