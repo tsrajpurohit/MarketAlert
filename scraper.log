@@ -64224,3 +64224,11 @@
 2026-08-22 17:51:15,907 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 404 Client Error: Not Found for url: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/companies/
 2026-08-22 17:51:40,240 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 404 Client Error: Not Found for url: https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/stocks/
 2026-08-22 17:51:41,830 - INFO - Scraping process completed.
+2026-08-22 18:01:10,300 - INFO - Starting news scraping process...
+2026-08-22 18:01:11,377 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-08-22 18:01:15,059 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 16 items.
+2026-08-22 18:01:15,059 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-08-22 18:01:15,059 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-08-22 18:01:15,072 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-08-22 18:01:16,516 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-08-22 18:01:16,524 - INFO - Scraping process completed.
