@@ -66178,3 +66178,7 @@
 2026-09-02 20:08:27,392 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
 2026-09-02 20:08:27,394 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
 2026-09-02 20:08:28,232 - INFO - Scraping process completed.
+2026-09-02 22:34:54,714 - INFO - Starting news scraping process...
+2026-09-02 22:34:54,871 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-09-02 22:34:58,971 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-09-02 22:34:59,567 - INFO - Scraping process completed.
