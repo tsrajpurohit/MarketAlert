@@ -67692,3 +67692,15 @@
 2026-09-20 17:24:14,083 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
 2026-09-20 17:24:14,720 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-09-20 17:24:15,414 - INFO - Scraping process completed.
+2026-09-20 19:34:10,430 - INFO - Starting news scraping process...
+2026-09-20 19:34:11,859 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 6 items.
+2026-09-20 19:34:11,860 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-09-20 19:34:11,860 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-09-20 19:34:11,862 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-09-20 19:34:13,260 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json with 2 items.
+2026-09-20 19:34:13,260 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json.
+2026-09-20 19:34:13,260 - INFO - JSON feed created/updated successfully: businessstandard_ipos_rss_feed.json
+2026-09-20 19:34:13,261 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_sent_ids.json
+2026-09-20 19:34:13,343 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-09-20 19:34:14,880 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-09-20 19:34:14,881 - INFO - Scraping process completed.
