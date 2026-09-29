@@ -68380,3 +68380,25 @@
 2026-09-29 06:52:13,141 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-09-29 06:52:14,725 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-09-29 06:52:14,732 - INFO - Scraping process completed.
+2026-09-29 13:23:27,883 - INFO - Starting news scraping process...
+2026-09-29 13:23:29,818 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-09-29 13:23:37,097 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 20 items.
+2026-09-29 13:23:37,097 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-09-29 13:23:37,098 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-09-29 13:23:37,100 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-09-29 13:23:51,499 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-09-29 13:24:57,945 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json with 40 items.
+2026-09-29 13:24:57,946 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_rss_feed.json.
+2026-09-29 13:24:57,946 - INFO - JSON feed created/updated successfully: businessstandard_capital_market_news_rss_feed.json
+2026-09-29 13:24:57,951 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_capital_market_news_sent_ids.json
+2026-09-29 13:24:59,594 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json with 1 items.
+2026-09-29 13:24:59,595 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json.
+2026-09-29 13:24:59,595 - INFO - JSON feed created/updated successfully: businessstandard_ipos_rss_feed.json
+2026-09-29 13:24:59,596 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_sent_ids.json
+2026-09-29 13:25:00,233 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-09-29 13:25:14,489 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-09-29 13:26:15,837 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 37 items.
+2026-09-29 13:26:15,837 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-09-29 13:26:15,838 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-09-29 13:26:15,851 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-09-29 13:26:15,852 - INFO - Scraping process completed.
