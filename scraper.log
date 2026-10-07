@@ -68900,3 +68900,16 @@
 2026-10-07 08:56:34,121 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
 2026-10-07 08:56:34,123 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
 2026-10-07 08:56:34,124 - INFO - Scraping process completed.
+2026-10-07 15:54:40,431 - INFO - Starting news scraping process...
+2026-10-07 15:54:56,189 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 41 items.
+2026-10-07 15:54:56,190 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-10-07 15:54:56,190 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-10-07 15:54:56,200 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-10-07 15:54:59,394 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-10-07 15:55:03,120 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-10-07 15:55:11,621 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-10-07 15:56:14,236 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 32 items.
+2026-10-07 15:56:14,237 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-10-07 15:56:14,237 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-10-07 15:56:14,239 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-10-07 15:56:14,239 - INFO - Scraping process completed.
