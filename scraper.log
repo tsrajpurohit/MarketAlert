@@ -68975,3 +68975,19 @@
 2026-10-08 14:00:07,386 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
 2026-10-08 14:00:08,265 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-10-08 14:00:08,274 - INFO - Scraping process completed.
+2026-10-08 19:39:12,107 - INFO - Starting news scraping process...
+2026-10-08 19:39:20,253 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 39 items.
+2026-10-08 19:39:20,254 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-10-08 19:39:20,269 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-10-08 19:39:20,392 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-10-08 19:39:20,541 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-10-08 19:39:27,631 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 33 items.
+2026-10-08 19:39:27,631 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-10-08 19:39:27,631 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-10-08 19:39:27,633 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-10-08 19:39:27,720 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-10-08 19:39:30,191 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json with 3 items.
+2026-10-08 19:39:30,191 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json.
+2026-10-08 19:39:30,191 - INFO - JSON feed created/updated successfully: businessstandard_ipos_rss_feed.json
+2026-10-08 19:39:30,191 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_sent_ids.json
+2026-10-08 19:39:30,191 - INFO - Scraping process completed.
