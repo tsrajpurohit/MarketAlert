@@ -69236,3 +69236,17 @@
 2026-10-13 03:10:07,513 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
 2026-10-13 03:10:08,906 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 2026-10-13 03:10:08,914 - INFO - Scraping process completed.
+2026-10-13 10:27:44,672 - INFO - Starting news scraping process...
+2026-10-13 10:28:45,131 - ERROR - Error fetching data from https://www.business-standard.com/markets/capital-market-news: 504 Server Error: Gateway Time-out for url: https://www.business-standard.com/markets/capital-market-news
+2026-10-13 10:28:46,310 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-10-13 10:28:49,320 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 2 items.
+2026-10-13 10:28:49,320 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-10-13 10:28:49,321 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-10-13 10:28:49,323 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-10-13 10:29:08,895 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 28 items.
+2026-10-13 10:29:08,895 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-10-13 10:29:08,896 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-10-13 10:29:08,909 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-10-13 10:29:09,536 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-10-13 10:30:10,369 - ERROR - Error fetching data from https://www.business-standard.com/markets/news: 504 Server Error: Gateway Time-out for url: https://www.business-standard.com/markets/news
+2026-10-13 10:30:10,370 - INFO - Scraping process completed.
