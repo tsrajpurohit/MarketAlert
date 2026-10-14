@@ -69365,3 +69365,7 @@
 2026-10-14 19:30:28,684 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
 2026-10-14 19:30:28,686 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
 2026-10-14 19:30:28,984 - INFO - Scraping process completed.
+2026-10-14 22:31:24,745 - INFO - Starting news scraping process...
+2026-10-14 22:31:25,626 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-10-14 22:31:29,168 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-10-14 22:31:30,508 - INFO - Scraping process completed.
