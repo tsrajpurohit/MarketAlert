@@ -69685,3 +69685,20 @@
 2026-10-19 00:48:54,291 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
 2026-10-19 00:48:54,293 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
 2026-10-19 00:48:54,440 - INFO - Scraping process completed.
+2026-10-19 05:23:28,628 - INFO - Starting news scraping process...
+2026-10-19 05:23:30,283 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-10-19 05:23:33,398 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json with 1 items.
+2026-10-19 05:23:33,398 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json.
+2026-10-19 05:23:33,398 - INFO - JSON feed created/updated successfully: businessstandard_ipos_rss_feed.json
+2026-10-19 05:23:33,399 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_sent_ids.json
+2026-10-19 05:23:54,196 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 23 items.
+2026-10-19 05:23:54,196 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-10-19 05:23:54,196 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-10-19 05:23:54,211 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-10-19 05:23:54,997 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-10-19 05:23:57,855 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-10-19 05:25:07,257 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 14 items.
+2026-10-19 05:25:07,258 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-10-19 05:25:07,258 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-10-19 05:25:07,261 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-10-19 05:25:09,210 - INFO - Scraping process completed.
