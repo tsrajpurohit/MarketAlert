@@ -70226,3 +70226,15 @@
 2026-10-25 23:13:53,134 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
 2026-10-25 23:13:54,832 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
 2026-10-25 23:13:54,833 - INFO - Scraping process completed.
+2026-10-26 01:11:27,925 - INFO - Starting news scraping process...
+2026-10-26 01:11:29,861 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 1 items.
+2026-10-26 01:11:29,861 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-10-26 01:11:29,889 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-10-26 01:11:29,892 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-10-26 01:11:30,169 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-10-26 01:11:37,153 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 6 items.
+2026-10-26 01:11:37,153 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-10-26 01:11:37,153 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-10-26 01:11:37,168 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-10-26 01:11:37,235 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-10-26 01:11:37,428 - INFO - Scraping process completed.
