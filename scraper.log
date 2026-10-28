@@ -70419,3 +70419,28 @@
 2026-10-28 14:06:58,778 - INFO - JSON feed created/updated successfully: moneycontrol_companies_rss_feed.json
 2026-10-28 14:06:58,781 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol__companies_sent_ids.json
 2026-10-28 14:06:58,781 - INFO - Scraping process completed.
+2026-10-28 19:27:18,234 - INFO - Starting news scraping process...
+2026-10-28 19:27:21,953 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json with 5 items.
+2026-10-28 19:27:21,953 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_rss_feed.json.
+2026-10-28 19:27:21,954 - INFO - JSON feed created/updated successfully: businessstandard_ipos_rss_feed.json
+2026-10-28 19:27:21,954 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_ipos_sent_ids.json
+2026-10-28 19:27:27,273 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 35 items.
+2026-10-28 19:27:27,274 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-10-28 19:27:27,274 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-10-28 19:27:27,277 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-10-28 19:27:39,346 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 45 items.
+2026-10-28 19:27:39,347 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-10-28 19:27:39,347 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-10-28 19:27:39,361 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-10-28 19:27:41,239 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_mutual_fund_rss_feed.json with 3 items.
+2026-10-28 19:27:41,239 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_mutual_fund_rss_feed.json.
+2026-10-28 19:27:41,239 - INFO - JSON feed created/updated successfully: businessstandard_mutual_fund_rss_feed.json
+2026-10-28 19:27:41,240 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_mutual_fund_sent_ids.json
+2026-10-28 19:27:42,934 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-10-28 19:27:42,992 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-10-28 19:27:44,743 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-10-28 19:28:44,745 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 26 items.
+2026-10-28 19:28:44,746 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-10-28 19:28:44,746 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-10-28 19:28:44,748 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-10-28 19:28:44,748 - INFO - Scraping process completed.
