@@ -71099,3 +71099,19 @@
 2026-11-07 22:50:00,479 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
 2026-11-07 22:50:00,572 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
 2026-11-07 22:50:02,564 - INFO - Scraping process completed.
+2026-11-08 01:53:48,975 - INFO - Starting news scraping process...
+2026-11-08 01:53:50,997 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 1 items.
+2026-11-08 01:53:50,998 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-11-08 01:53:50,998 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-11-08 01:53:51,014 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-11-08 01:54:11,501 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-11-08 01:55:14,139 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 25 items.
+2026-11-08 01:55:14,139 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2026-11-08 01:55:14,140 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2026-11-08 01:55:14,147 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2026-11-08 01:55:19,353 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 2 items.
+2026-11-08 01:55:19,354 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-11-08 01:55:19,354 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-11-08 01:55:19,357 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-11-08 01:55:20,716 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-11-08 01:55:21,348 - INFO - Scraping process completed.
