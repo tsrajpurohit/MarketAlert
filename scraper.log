@@ -71191,3 +71191,15 @@
 2026-11-09 10:17:37,597 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
 2026-11-09 10:17:37,608 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
 2026-11-09 10:17:40,349 - INFO - Scraping process completed.
+2026-11-09 20:47:29,051 - INFO - Starting news scraping process...
+2026-11-09 20:47:29,228 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-11-09 20:47:38,690 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 33 items.
+2026-11-09 20:47:38,691 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-11-09 20:47:38,691 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-11-09 20:47:38,703 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-11-09 20:47:38,798 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-11-09 20:47:52,615 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 30 items.
+2026-11-09 20:47:52,616 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-11-09 20:47:52,616 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-11-09 20:47:52,618 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-11-09 20:47:52,619 - INFO - Scraping process completed.
