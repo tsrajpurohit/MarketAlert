@@ -71227,3 +71227,19 @@
 2026-11-10 03:00:36,286 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
 2026-11-10 03:00:36,292 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
 2026-11-10 03:00:36,293 - INFO - Scraping process completed.
+2026-11-10 10:47:20,016 - INFO - Starting news scraping process...
+2026-11-10 10:47:22,215 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json with 3 items.
+2026-11-10 10:47:22,215 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_rss_feed.json.
+2026-11-10 10:47:22,215 - INFO - JSON feed created/updated successfully: economictimes_earnings_rss_feed.json
+2026-11-10 10:47:22,218 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_earnings_sent_ids.json
+2026-11-10 10:47:28,769 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 15 items.
+2026-11-10 10:47:28,769 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-11-10 10:47:28,770 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-11-10 10:47:28,787 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-11-10 10:47:29,564 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-11-10 10:47:33,423 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 5 items.
+2026-11-10 10:47:33,423 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-11-10 10:47:33,423 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-11-10 10:47:33,427 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-11-10 10:47:34,317 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-11-10 10:47:34,324 - INFO - Scraping process completed.
