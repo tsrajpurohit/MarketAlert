@@ -71407,3 +71407,20 @@
 2026-11-13 01:25:58,827 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
 2026-11-13 01:25:58,904 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
 2026-11-13 01:25:59,558 - INFO - Scraping process completed.
+2026-11-13 08:23:19,482 - INFO - Starting news scraping process...
+2026-11-13 08:23:40,959 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json with 26 items.
+2026-11-13 08:23:40,960 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_rss_feed.json.
+2026-11-13 08:23:40,961 - INFO - JSON feed created/updated successfully: economictimes_stocks_rss_feed.json
+2026-11-13 08:23:40,976 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/economictimes_stocks_sent_ids.json
+2026-11-13 08:23:47,910 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-11-13 08:25:11,427 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json with 25 items.
+2026-11-13 08:25:11,428 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/moneycontrol_rss_feed.json.
+2026-11-13 08:25:11,428 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
+2026-11-13 08:25:11,436 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
+2026-11-13 08:25:14,162 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2026-11-13 08:25:14,933 - WARNING - Rate limit exceeded. Waiting before retrying...
+2026-11-13 08:26:37,600 - INFO - Creating/Updating JSON feed: /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json with 19 items.
+2026-11-13 08:26:37,601 - INFO - JSON feed successfully written to /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_rss_feed.json.
+2026-11-13 08:26:37,601 - INFO - JSON feed created/updated successfully: businessstandard_markets_news_rss_feed.json
+2026-11-13 08:26:37,604 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/businessstandard_markets_news_sent_ids.json
+2026-11-13 08:26:37,604 - INFO - Scraping process completed.
