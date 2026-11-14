@@ -71491,3 +71491,7 @@
 2026-11-14 15:45:31,439 - INFO - JSON feed created/updated successfully: moneycontrol_rss_feed.json
 2026-11-14 15:45:31,446 - INFO - Sent alerts updated in /home/runner/work/MarketAlert/MarketAlert/moneycontrol_sent_ids.json
 2026-11-14 15:45:31,591 - INFO - Scraping process completed.
+2026-11-14 20:05:04,663 - INFO - Starting news scraping process...
+2026-11-14 20:05:05,918 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/companies/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/companies/
+2026-11-14 20:05:05,974 - ERROR - Error fetching data from https://www.moneycontrol.com/news/business/stocks/: 403 Client Error: Forbidden for url: https://www.moneycontrol.com/news/business/stocks/
+2026-11-14 20:05:07,927 - INFO - Scraping process completed.
